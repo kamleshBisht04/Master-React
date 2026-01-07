@@ -363,36 +363,33 @@
 
 // multiple inheritance using mixins
 
-class Animal {
-  #name;
-  constructor(newName) {
-    this.#name = newName;
-  }
-  eat() {
-    console.log(`${this.#name} is a eating.. `);
-  }
-}
+// class Animal {
+//   #name;
+//   constructor(newName) {
+//     this.#name = newName;
+//   }
+//   eat() {
+//     console.log(`${this.#name} is a eating.. `);
+//   }
+// }
 
-const flyable = (base) =>
-  class extends base {
-    fly() {
-      console.log("Animal can fly....");
-    }
-  };
+// const flyable = (base) =>
+//   class extends base {
+//     fly() {
+//       console.log("Animal can fly....");
+//     }
+//   };
 
-class Bird extends flyable(Animal) {
-  getDetails() {
-    console.log("Birds lives in honest ....");
-  }
-}
+// class Bird extends flyable(Animal) {
+//   getDetails() {
+//     console.log("Birds lives in honest ....");
+//   }
+// }
 
-const obj = new Bird("parrot");
-obj.eat();
-obj.fly();
-obj.getDetails();
-
-
-
+// const obj = new Bird("parrot");
+// obj.eat();
+// obj.fly();
+// obj.getDetails();
 
 // class Animal {
 //   eat() {
@@ -416,3 +413,63 @@ obj.getDetails();
 // myBird.fly();
 // myBird.eat();
 // myBird.bird();
+
+// ====================================================
+
+// javascript  objects
+// first  way to create object
+
+const Person = {
+  name: "kamlesh",
+  qualification: "btech",
+  city: "New Delhi",
+  getDetails() {
+    console.log(
+      `${this.name} is a computer science engineer and done ${this.qualification} from ${this.city}`
+    );
+  },
+};
+
+console.log(Person.name);
+console.log(Person.qualification);
+console.log(Person.city);
+console.log(Person.getDetails());
+
+console.log("name" in Person);
+console.log("toString" in Person); 
+//  but toString is not present but it say true becosx toString is present in object
+
+console.log(Person.hasOwnProperty("name"))
+console.log(Person.hasOwnProperty("toStirng"))
+
+
+for(let key in Person){
+    console.log(key + " : " + Person[key])
+}
+
+console.log(Object.keys(Person))
+
+console.log(Object.values(Person))
+
+console.log(Object.entries(Person))
+
+for(const [key,value] of Object.entries(Person)){
+  console.log(key,value)
+}
+
+
+
+
+
+
+
+
+
+
+// second way to create objects
+
+// const NewPerson = new Object();
+// NewPerson.name = "Ajay";
+// console.log(NewPerson);
+// console.log(NewPerson instanceof Object);
+// console.log(typeof Person)
