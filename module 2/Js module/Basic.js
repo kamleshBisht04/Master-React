@@ -95,10 +95,10 @@
  
 
 // Example 3:function Hoisting
-greet();
-function greet(){
-    console.log("Hello Lovely Family.!!")
-}
+// greet();
+// function greet(){
+//     console.log("Hello Lovely Family.!!")
+// }
 
 
 //  Example 4: function expression Hoisting
@@ -110,11 +110,106 @@ function greet(){
 //     console.error(e)
 // }
 
+// heyFun();
 // let heyFun = function heyFun(){
 //     console.log("heyFun!!")
 // }
 
+// ==============================================
+
+//  Var & let & Const 
+
+// var a = 20;
+// a = 30;
+// console.log(a);
+
+// Let 
+
+// let a = 20;
+//  a = 30; 
+// console.log(a)
+
+//const
+// const a =10;
+//  a = 30;
+//  console.log(a)
 
 
+// Function scope
+
+// function varExample(){
+//     if(true){
+//         var x =10;
+//         // console.log(x)
+//     }
+//     console.log(x)
+// }
+
+// varExample();
+
+// function letExample(){
+//     if(true){
+//         let x =10;
+//         console.log(x)
+//     }
+//     // console.log(x)  // reference error 
+// }
+
+// letExample();
+
+// for(var i=1;i<=3;i++){
+//     setTimeout(()=>{
+//        console.log(i);
+//     },1000)
+// }
 
 
+// for(let i=1;i<=3;i++){
+//     setTimeout(()=>{
+//        console.log(i);
+//     },1000)
+// }
+
+// ==============================================
+
+//L5 -  Arrow Function vs Normal Function – Deep Dive into 'this' keyword Behavior"
+
+function greet(){
+    console.log("Hello Ajay.!!")
+}
+greet();
+greet();
+
+// Arrow function
+
+// const greet = ()=>{
+//     console.log("Hello Ajay.!!")
+// }
+// greet();
+
+const abc = () => 'ajay suneja';
+const text = abc();
+console.log(text)
+
+name = 'vikas'
+
+const user = {
+    name:'Ajay',
+    sayHi:function(){
+        console.log("Hey",this.name)
+    }
+}
+user.sayHi();
+
+//  Arrow function it don't have this keyword it will taken it from perent se 
+
+const user1 = {
+    name:'Ajay',
+    sayHi:()=>{
+        console.log("Hey",name)
+    }
+}
+user1.sayHi();
+
+
+// ==============================================
