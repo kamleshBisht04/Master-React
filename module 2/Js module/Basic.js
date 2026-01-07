@@ -29,7 +29,7 @@
 
 // console.log("End");
 
-// // another example 
+// // another example
 
 // console.log("👨‍🍳 Waiter: Order received!");
 
@@ -47,7 +47,6 @@
 
 //  promise and fetch m phele promiss then fetch
 
-
 // function f1(){
 //     console.log("F1")
 // }
@@ -57,15 +56,14 @@
 // }
 // f2();
 
-//  f2 f1 pop f1 then f2 
+//  f2 f1 pop f1 then f2
 
-
-//  leacture 2 
+//  leacture 2
 
 //  Hoiesting
- 
+
 // variable with var key word
-//  declaration top of the scope 
+//  declaration top of the scope
 
 //  Example 1:
 // console.log(num)
@@ -73,10 +71,10 @@
 
 // console.log(num);
 
-// variable with let 
+// variable with let
 //  let and cost comes for sefaty and bugs error less rebost application
 
-// console.log(num) // reference error 
+// console.log(num) // reference error
 //  they are inside  tdz
 
 // let num = 20;
@@ -92,14 +90,12 @@
 // }
 // let b = 20;
 // console.log(b);
- 
 
 // Example 3:function Hoisting
 // greet();
 // function greet(){
 //     console.log("Hello Lovely Family.!!")
 // }
-
 
 //  Example 4: function expression Hoisting
 //  reference error hyfun access before insilization
@@ -117,23 +113,22 @@
 
 // ==============================================
 
-//  Var & let & Const 
+//  Var & let & Const
 
 // var a = 20;
 // a = 30;
 // console.log(a);
 
-// Let 
+// Let
 
 // let a = 20;
-//  a = 30; 
+//  a = 30;
 // console.log(a)
 
 //const
 // const a =10;
 //  a = 30;
 //  console.log(a)
-
 
 // Function scope
 
@@ -152,7 +147,7 @@
 //         let x =10;
 //         console.log(x)
 //     }
-//     // console.log(x)  // reference error 
+//     // console.log(x)  // reference error
 // }
 
 // letExample();
@@ -162,7 +157,6 @@
 //        console.log(i);
 //     },1000)
 // }
-
 
 // for(let i=1;i<=3;i++){
 //     setTimeout(()=>{
@@ -174,11 +168,11 @@
 
 //L5 -  Arrow Function vs Normal Function – Deep Dive into 'this' keyword Behavior"
 
-function greet(){
-    console.log("Hello Ajay.!!")
-}
-greet();
-greet();
+// function greet(){
+//     console.log("Hello Ajay.!!")
+// }
+// greet();
+// greet();
 
 // Arrow function
 
@@ -187,29 +181,238 @@ greet();
 // }
 // greet();
 
-const abc = () => 'ajay suneja';
-const text = abc();
-console.log(text)
+// const abc = () => 'ajay suneja';
+// const text = abc();
+// console.log(text)
 
-name = 'vikas'
+// name = 'vikas'
 
-const user = {
-    name:'Ajay',
-    sayHi:function(){
-        console.log("Hey",this.name)
-    }
+// const user = {
+//     name:'Ajay',
+//     sayHi:function(){
+//         console.log("Hey",this.name)
+//     }
+// }
+// user.sayHi();
+
+//  Arrow function it don't have this keyword it will taken it from perent se
+//  it will point to global or window object lexical scope
+
+// const user1 = {
+//     name:'Ajay',
+//     sayHi:()=>{
+//         console.log("Hey",name)
+//     }
+// }
+// user1.sayHi();
+
+// =========================================================
+// CLOSURE AND LEXICAL SCOPE
+
+// function createCounter() {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     return count;
+//   };
+// }
+
+// const counter = createCounter();
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
+
+// =========================================================
+
+// Clean Code with Getters and Setters: JavaScript OOP Simplified
+
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// const person = new Person("kamlesh");
+// console.log(person.name);
+
+// person.name = "Sanjay kumar"
+// console.log(person.name);
+
+//  above we can change ever thing via diret assigh the value
+//  so the getter and setter concept in picture
+
+// =========================================================
+
+// class Person {
+//   constructor(name) {
+//     this._name = name;
+//   }
+//   // getter
+//   get name() {
+//     return this._name;
+//   }
+//   // setter
+//   set name(newName) {
+//     if (!name) {
+//       this._name = newName;
+//     }else {
+//         console.log("name is not provided")
+//     }
+//     // this._name = newName;
+//   }
+// }
+
+// const person = new Person("kamlesh");
+// console.log(person.name);
+
+// person.name = "Deepak";
+// console.log(person.name);
+
+// person.name = "";
+// console.log(person.name);
+// here we can change the value of name
+
+// =======================================================
+
+// class Person {
+//   #name; // Private variable
+//   constructor(name) {
+//     this.#name = name;
+//   }
+//   get name() {
+//     return this.#name;
+//   }
+//   set name(newName) {
+//     if (newName) {
+//       this._name = newName;
+//     } else {
+//       console.log("New Name cannot be empty");
+//     }
+//   }
+// }
+
+// const person = new Person("Ajay");
+// console.log(person.name);
+
+// person.name = "vikas"; // call setter method
+// console.log(person.name); // getter
+
+// person.name = "";
+
+// =======================================================
+// INHERITANCE
+
+// class A {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// class B extends A {
+// //   constructor(...args) {
+// //     super(...args);
+// //   }
+//   getDetails() {
+//     return `Here is ${this.name}`;
+//   }
+// }
+
+// const obj = new B("kamlesh");
+// console.log(obj.getDetails());
+
+// ================================================
+//  private methods
+
+// class User {
+//   #logAccess() {
+//     console.log("private login");
+//   }
+//   showProfile() {
+//     console.log("showProfile...");
+//     this.#logAccess();
+//   }
+// }
+// const u = new User();
+// u.showProfile();
+
+// ==================================================
+// multiple inheritance
+
+// class A {
+//   sayA() {
+//     console.log("say A");
+//   }
+// }
+// class B extends A {
+//   sayB() {
+//     console.log("say B");
+//   }
+// }
+// class C extends B {
+//   sayC() {
+//     console.log("say C");
+//   }
+// }
+
+// const obj = new C();
+// obj.sayA();
+// obj.sayB();
+// obj.sayC();
+
+// ==================================================
+
+// multiple inheritance using mixins
+
+class Animal {
+  #name;
+  constructor(newName) {
+    this.#name = newName;
+  }
+  eat() {
+    console.log(`${this.#name} is a eating.. `);
+  }
 }
-user.sayHi();
 
-//  Arrow function it don't have this keyword it will taken it from perent se 
-
-const user1 = {
-    name:'Ajay',
-    sayHi:()=>{
-        console.log("Hey",name)
+const flyable = (base) =>
+  class extends base {
+    fly() {
+      console.log("Animal can fly....");
     }
+  };
+
+class Bird extends flyable(Animal) {
+  getDetails() {
+    console.log("Birds lives in honest ....");
+  }
 }
-user1.sayHi();
+
+const obj = new Bird("parrot");
+obj.eat();
+obj.fly();
+obj.getDetails();
 
 
-// ==============================================
+
+
+// class Animal {
+//   eat() {
+//     console.log("Eating");
+//   }
+// }
+// const flyable = (Base) =>
+//   class extends Base {
+//     fly() {
+//       console.log("Flying");
+//     }
+//   }; // Mixins
+
+// class Bird extends flyable(Animal) {
+//   bird() {
+//     console.log("bird");
+//   }
+// }
+
+// const myBird = new Bird();
+// myBird.fly();
+// myBird.eat();
+// myBird.bird();
