@@ -48,16 +48,72 @@
 //  promise and fetch m phele promiss then fetch
 
 
-function f1(){
-    console.log("F1")
-}
-function f2(){
-    f1();
-    console.log("F2")
-}
-f2();
+// function f1(){
+//     console.log("F1")
+// }
+// function f2(){
+//     f1();
+//     console.log("F2")
+// }
+// f2();
 
 //  f2 f1 pop f1 then f2 
+
+
+//  leacture 2 
+
+//  Hoiesting
+ 
+// variable with var key word
+//  declaration top of the scope 
+
+//  Example 1:
+// console.log(num)
+// var num = 10;
+
+// console.log(num);
+
+// variable with let 
+//  let and cost comes for sefaty and bugs error less rebost application
+
+// console.log(num) // reference error 
+//  they are inside  tdz
+
+// let num = 20;
+// num =30;
+// console.log(num)
+
+// Example 2: var example
+
+// try{
+// console.log(b);
+// }catch(e){
+//     console.error(e);
+// }
+// let b = 20;
+// console.log(b);
+ 
+
+// Example 3:function Hoisting
+greet();
+function greet(){
+    console.log("Hello Lovely Family.!!")
+}
+
+
+//  Example 4: function expression Hoisting
+//  reference error hyfun access before insilization
+
+// try{
+//     heyFun();
+// }catch(e){
+//     console.error(e)
+// }
+
+// let heyFun = function heyFun(){
+//     console.log("heyFun!!")
+// }
+
 
 
 
