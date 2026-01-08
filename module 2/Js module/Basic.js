@@ -541,42 +541,89 @@
 
 // Deepcopy and shellow copy
 
-const Account = {
-  accountHolder: "kamlesh singh bisht",
-  accountno: 123648415584411,
-  address: {
-    city: "Delhi",
-    country: "Indian",
-    Pincode: 110025,
-    cityDetails: {
-      area: "Rular",
-      mp: 10,
-    },
-  },
-};
+// const Account = {
+//   accountHolder: "kamlesh singh bisht",
+//   accountno: 123648415584411,
+//   address: {
+//     city: "Delhi",
+//     country: "Indian",
+//     Pincode: 110025,
+//     cityDetails: {
+//       area: "Rular",
+//       mp: 10,
+//     },
+//   },
+// };
 
-//  shellow copy pointing to same memory location
-// two way
+// //  shellow copy pointing to same memory location
+// // two way
+// primitve can share different location important
 
-// const AccountShellowCopy = Object.assign({}, Account);
+// // const AccountShellowCopy = Object.assign({}, Account);
 
-const AccountShellowCopy = { ...Account };
-console.log(AccountShellowCopy);
+// const AccountShellowCopy = { ...Account };
+// console.log(AccountShellowCopy);
 
-//  Deep copy
+// //  Deep copy
 
-const AccountDeepCopy = JSON.parse(JSON.stringify(Account));
-console.log(AccountDeepCopy);
+// const AccountDeepCopy = JSON.parse(JSON.stringify(Account));
+// console.log(AccountDeepCopy);
 
-// chnageing the origanle accout
-Account.address.city = "Uttarakhand";
-Account.address.cityDetails.mp = 5;
+// // chnageing the origanle accout
+// Account.address.city = "Uttarakhand";
+// Account.address.cityDetails.mp = 5;
 
-console.log(Account);
-console.log(AccountShellowCopy);
-console.log(AccountDeepCopy);
+// Account.accountHolder="Deepak singh Rawat"
+
+// console.log(Account);
+// console.log(AccountShellowCopy);
+// console.log(AccountDeepCopy);
 
 //==================================================
 
+// Array
 
+const users = [
+  { id: 1, name: "John Doe", age: 20, price: 100 },
+  { id: 2, name: "Emma Stone", age: 20, price: 200 },
+  { id: 3, name: "Max", age: 19, price: 500 },
+  { id: 4, name: "Olivia Smith", age: 31, price: 300 },
+];
+
+// map method
+const userName = users.map((user) => user.name.toUpperCase());
+console.log(userName);
+
+// filter method
+const userNamePriceOver200 = users.filter((user) => user.price > 200).map((user) => user.name.toUpperCase());
+console.log(userNamePriceOver200);
+
+// Reduced method
+
+const totalMoney = users.reduce((sum, user) => sum + user.price, 0);
+console.log(totalMoney);
+
+// find method 
+
+  const name = users.find(user => user.age > 20);
+  console.log(name)
+
+  // findIndex()
+const nameIndex = users.findIndex((user) => user.name === "Emma Stone");
+console.log(nameIndex);
+
+// join()
+const nameString = userName.join(", ")
+console.log(nameString);
+// split()
+const nameArray = nameString.split(", ")
+console.log(nameArray);
+
+const age = users.filter(user => user.age >= 20);
+console.log(age);
+
+const result = users.filter(user => user.age > 20).map(user => user.name.toUpperCase());
+console.log(result)
+
+console.log(users.map(user => user.name.toUpperCase()));
 
