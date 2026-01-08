@@ -697,43 +697,86 @@
 
 // Mastering Spread & Rest Operators in JavaScript 
 
-const nums = [1,2,3];
-const copy = [...nums,4];
-console.log(copy)
+// const nums = [1,2,3];
+// const copy = [...nums,4];
+// console.log(copy)
 
-const newStudent = {
-    name:'Ajay'
+// const newStudent = {
+//     name:'Ajay'
+// }
+
+// const copy1 = {...newStudent,'age':28}
+// console.log(copy1)
+
+
+// const a = [1,2,3];
+// const b = [4,5,6];
+// const merge = [...a,...b];
+// console.log(merge)
+
+// function sum(a,b,c){
+//     return a+b+c;
+// }
+// const values = [1,2,3];
+// console.log(sum(...values));
+
+// // Rest Operator
+// // packing of data into array 
+
+// function logAll(...items){
+//  console.log(items)
+// }
+// logAll("Pen","Pencil","Eraser")
+
+
+// const [first,second ,...rest]  = [10,20,30,40];
+// console.log(first,second,rest)
+
+// =====================================================
+
+// Ternary Operator & Short-Circuiting
+
+// Condition ? '' : '';
+
+const age = 40;
+const status =  age >= 18 ? 'Adult' : 'Minor';
+console.log(status)
+
+if(age >= 18){
+    return 'Adult'
+}else{
+    return 'Minor'
 }
 
-const copy1 = {...newStudent,'age':28}
-console.log(copy1)
+// short circuiting in java scripting
+
+const input = "" || "Default Value"
+console.log(input)
+
+const isLoggedIN = false;
+isLoggedIN && console.log("Welcome back")
+
+// =====================================================
+
+// Boolean Values in JS
+// 0 -> False
+// 1 -> True
 
 
-const a = [1,2,3];
-const b = [4,5,6];
-const merge = [...a,...b];
-console.log(merge)
+if (0) console.log("Won't Run!");    
+if ("") console.log("Won't Run!");    
+if (null) console.log("Won't Run!");  
+if (undefined) console.log("Won't Run!");
 
-function sum(a,b,c){
-    return a+b+c;
-}
-const values = [1,2,3];
-console.log(sum(...values));
+if (1) console.log("Runs!");  
+if ("Hello") console.log("Runs!");  
+if (42) console.log("Runs!");       
+if ([]) console.log("Runs!");    
+if ({}) console.log("Runs!");   
+console.log(typeof [])
 
-// Rest Operator
-// packing of data into array 
-
-function logAll(...items){
- console.log(items)
-}
-logAll("Pen","Pencil","Eraser")
-
-
-const [first,second ,...rest]  = [10,20,30,40];
-console.log(first,second,rest)
-
-
-
-
-
-
+console.log(Boolean(0))
+console.log(Boolean(1))
+console.log(Boolean(""))
+console.log(Boolean(undefined))
+console.log(Boolean(null))
