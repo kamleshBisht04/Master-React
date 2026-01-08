@@ -631,41 +631,68 @@
 
 // call apply and bind method
 
-const user1 ={
-    name:"Ajay",
-    age:28
-}
+// const user1 ={
+//     name:"Ajay",
+//     age:28
+// }
 
-const user2 ={
-    name:"Rahul",
-    age:25
-}
+// const user2 ={
+//     name:"Rahul",
+//     age:25
+// }
 
-function printDetails(city,country){
-    console.log(`Name:${this.name} ,Age: ${this.age},Location:${city} ${country} `)
-}
+// function printDetails(city,country){
+//     console.log(`Name:${this.name} ,Age: ${this.age},Location:${city} ${country} `)
+// }
 
-printDetails.call(user2,'Delhi','India')
-printDetails.apply(user1,['Delhi','India'])
+// printDetails.call(user2,'Delhi','India')
+// printDetails.apply(user1,['Delhi','India'])
 
-// bind will return a function and then we use it 
-const userDetails = printDetails.bind(user1 ,"Dellhi" ,"India");
-userDetails();
+// // bind will return a function and then we use it 
+// const userDetails = printDetails.bind(user1 ,"Dellhi" ,"India");
+// userDetails();
 
 
-// 2 example
+// // 2 example
 
-const obj = {
-   name:"kamlesh",
-   greet:function(){
-    return `Hello,${this.name}`
-   }
-}
+// const obj = {
+//    name:"kamlesh",
+//    greet:function(){
+//     return `Hello,${this.name}`
+//    }
+// }
 
-const greetFn=obj.greet.bind(obj);
-console.log(greetFn())
+// const greetFn=obj.greet.bind(obj);
+// console.log(greetFn())
 
 // =====================================================
+
+let cart = ["Milk", "Bread", "Butter", "Eggs", "Juice"]; 
+
+console.log(cart)
+
+const preview = cart.slice(1,3);
+console.log(preview)
+console.log(cart)
+
+// splice change the value of array 
+// modifing the existing array 
+
+let items = ["Pen", "Pencil", "Notebook", "Eraser", "Sharpener"];
+
+console.log(items)
+
+items.splice(2,1)
+
+console.log(items)
+
+// adding the items
+items.splice(1,0,'Marker')
+console.log(items)
+
+items.splice(2,2,'Scale','Ruler')
+console.log(items)
+
 
 
 
