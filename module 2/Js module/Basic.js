@@ -581,49 +581,95 @@
 
 //==================================================
 
-// Array
+// // Array
 
-const users = [
-  { id: 1, name: "John Doe", age: 20, price: 100 },
-  { id: 2, name: "Emma Stone", age: 20, price: 200 },
-  { id: 3, name: "Max", age: 19, price: 500 },
-  { id: 4, name: "Olivia Smith", age: 31, price: 300 },
-];
+// const users = [
+//   { id: 1, name: "John Doe", age: 20, price: 100 },
+//   { id: 2, name: "Emma Stone", age: 20, price: 200 },
+//   { id: 3, name: "Max", age: 19, price: 500 },
+//   { id: 4, name: "Olivia Smith", age: 31, price: 300 },
+// ];
 
-// map method
-const userName = users.map((user) => user.name.toUpperCase());
-console.log(userName);
+// // map method
+// const userName = users.map((user) => user.name.toUpperCase());
+// console.log(userName);
 
-// filter method
-const userNamePriceOver200 = users.filter((user) => user.price > 200).map((user) => user.name.toUpperCase());
-console.log(userNamePriceOver200);
+// // filter method
+// const userNamePriceOver200 = users.filter((user) => user.price > 200).map((user) => user.name.toUpperCase());
+// console.log(userNamePriceOver200);
 
-// Reduced method
+// // Reduced method
 
-const totalMoney = users.reduce((sum, user) => sum + user.price, 0);
-console.log(totalMoney);
+// const totalMoney = users.reduce((sum, user) => sum + user.price, 0);
+// console.log(totalMoney);
 
-// find method 
+// // find method
 
-  const name = users.find(user => user.age > 20);
-  console.log(name)
+//   const name = users.find(user => user.age > 20);
+//   console.log(name)
 
-  // findIndex()
-const nameIndex = users.findIndex((user) => user.name === "Emma Stone");
-console.log(nameIndex);
+//   // findIndex()
+// const nameIndex = users.findIndex((user) => user.name === "Emma Stone");
+// console.log(nameIndex);
 
-// join()
-const nameString = userName.join(", ")
-console.log(nameString);
-// split()
-const nameArray = nameString.split(", ")
-console.log(nameArray);
+// // join()
+// const nameString = userName.join(", ")
+// console.log(nameString);
+// // split()
+// const nameArray = nameString.split(", ")
+// console.log(nameArray);
 
-const age = users.filter(user => user.age >= 20);
-console.log(age);
+// const age = users.filter(user => user.age >= 20);
+// console.log(age);
 
-const result = users.filter(user => user.age > 20).map(user => user.name.toUpperCase());
-console.log(result)
+// const result = users.filter(user => user.age > 20).map(user => user.name.toUpperCase());
+// console.log(result)
 
-console.log(users.map(user => user.name.toUpperCase()));
+// console.log(users.map(user => user.name.toUpperCase()));
+
+// =======================================================
+
+// call apply and bind method
+
+const user1 ={
+    name:"Ajay",
+    age:28
+}
+
+const user2 ={
+    name:"Rahul",
+    age:25
+}
+
+function printDetails(city,country){
+    console.log(`Name:${this.name} ,Age: ${this.age},Location:${city} ${country} `)
+}
+
+printDetails.call(user2,'Delhi','India')
+printDetails.apply(user1,['Delhi','India'])
+
+// bind will return a function and then we use it 
+const userDetails = printDetails.bind(user1 ,"Dellhi" ,"India");
+userDetails();
+
+
+// 2 example
+
+const obj = {
+   name:"kamlesh",
+   greet:function(){
+    return `Hello,${this.name}`
+   }
+}
+
+const greetFn=obj.greet.bind(obj);
+console.log(greetFn())
+
+// =====================================================
+
+
+
+
+
+
 
