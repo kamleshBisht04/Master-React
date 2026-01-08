@@ -512,27 +512,71 @@
 
 // Distructuring in java script
 
-const User = {
-  name: "Ajay",
-  age: 30,
-  location: "Delhi",
+// const User = {
+//   name: "Ajay",
+//   age: 30,
+//   location: "Delhi",
+// };
+
+// // const user1 = user.name;
+// // console.log(user1);
+
+// // const { name, age, location: city } = User;
+// // console.log(name, age, city);
+
+// const {email = 'Not Provided' } = User;
+// console.log(email)
+
+// // array destructuring
+
+// const colors = ['Red','Pink','Green'];
+
+// const [ first, second ] = colors;
+// console.log(first,second)
+
+// const [ , , third ] = colors;
+// console.log(third)
+
+//==================================================
+
+// Deepcopy and shellow copy
+
+const Account = {
+  accountHolder: "kamlesh singh bisht",
+  accountno: 123648415584411,
+  address: {
+    city: "Delhi",
+    country: "Indian",
+    Pincode: 110025,
+    cityDetails: {
+      area: "Rular",
+      mp: 10,
+    },
+  },
 };
 
-// const user1 = user.name;
-// console.log(user1);
+//  shellow copy pointing to same memory location
+// two way
 
-// const { name, age, location: city } = User;
-// console.log(name, age, city);
+// const AccountShellowCopy = Object.assign({}, Account);
 
-const {email = 'Not Provided' } = User;
-console.log(email)
+const AccountShellowCopy = { ...Account };
+console.log(AccountShellowCopy);
 
-// array destructuring 
+//  Deep copy
 
-const colors = ['Red','Pink','Green'];
+const AccountDeepCopy = JSON.parse(JSON.stringify(Account));
+console.log(AccountDeepCopy);
 
-const [ first, second ] = colors;
-console.log(first,second)
+// chnageing the origanle accout
+Account.address.city = "Uttarakhand";
+Account.address.cityDetails.mp = 5;
 
-const [ , , third ] = colors;
-console.log(third)
+console.log(Account);
+console.log(AccountShellowCopy);
+console.log(AccountDeepCopy);
+
+//==================================================
+
+
+
