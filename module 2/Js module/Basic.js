@@ -419,52 +419,42 @@
 // javascript  objects
 // first  way to create object
 
-const Person = {
-  name: "kamlesh",
-  qualification: "btech",
-  city: "New Delhi",
-  getDetails() {
-    console.log(
-      `${this.name} is a computer science engineer and done ${this.qualification} from ${this.city}`
-    );
-  },
-};
+// const Person = {
+//   name: "kamlesh",
+//   qualification: "btech",
+//   city: "New Delhi",
+//   getDetails() {
+//     console.log(
+//       `${this.name} is a computer science engineer and done ${this.qualification} from ${this.city}`
+//     );
+//   },
+// };
 
-console.log(Person.name);
-console.log(Person.qualification);
-console.log(Person.city);
-console.log(Person.getDetails());
+// console.log(Person.name);
+// console.log(Person.qualification);
+// console.log(Person.city);
+// console.log(Person.getDetails());
 
-console.log("name" in Person);
-console.log("toString" in Person); 
-//  but toString is not present but it say true becosx toString is present in object
+// console.log("name" in Person);
+// console.log("toString" in Person);
+// //  but toString is not present but it say true becosx toString is present in object
 
-console.log(Person.hasOwnProperty("name"))
-console.log(Person.hasOwnProperty("toStirng"))
+// console.log(Person.hasOwnProperty("name"))
+// console.log(Person.hasOwnProperty("toStirng"))
 
+// for(let key in Person){
+//     console.log(key + " : " + Person[key])
+// }
 
-for(let key in Person){
-    console.log(key + " : " + Person[key])
-}
+// console.log(Object.keys(Person))
 
-console.log(Object.keys(Person))
+// console.log(Object.values(Person))
 
-console.log(Object.values(Person))
+// console.log(Object.entries(Person))
 
-console.log(Object.entries(Person))
-
-for(const [key,value] of Object.entries(Person)){
-  console.log(key,value)
-}
-
-
-
-
-
-
-
-
-
+// for(const [key,value] of Object.entries(Person)){
+//   console.log(key,value)
+// }
 
 // second way to create objects
 
@@ -473,3 +463,76 @@ for(const [key,value] of Object.entries(Person)){
 // console.log(NewPerson);
 // console.log(NewPerson instanceof Object);
 // console.log(typeof Person)
+
+// ==================================================
+
+// L - 9 Optional Chaining (?.) & Nullish Coalescing (??) & Logical OR (||) in JavaScript
+// these are seafty operatores ...
+
+// const User = {
+//     name: "Ajay",
+//     // address :{
+//     //  city:"Delhi",
+//     //  pincode:"110044"
+//     // },
+//     preferences: null,
+//     amount: 0,
+//     getData:function(){
+//         return this.name
+//     }
+// };
+// // optional chaining
+// const city = User?.address?.city ?? 'Mumbai';
+// console.log(city)
+
+// //  if function not exist   // undefine .....
+// console.log(User.getData?.());
+
+// // nullish coalescing
+
+// // const TotalMoney = User.amount || 10000;
+// // solution for this problem
+// // nulll or undefine then 2nd value evualted otherwise first shortcircuit return
+
+// // const TotalMoney = User.amount || 10000;
+// // console.log(TotalMoney)
+
+// const TotalMoney = User.amount ?? 10000;
+// console.log(TotalMoney)
+
+// const prefs = User.preferences ?? 'No Preference Set';
+// console.log(prefs)
+
+// // OR Operator // turthy value return
+// const quantity = 0;
+// const result = quantity || 10;
+// console.log(result)
+
+//======================================================
+
+// Distructuring in java script
+
+const User = {
+  name: "Ajay",
+  age: 30,
+  location: "Delhi",
+};
+
+// const user1 = user.name;
+// console.log(user1);
+
+// const { name, age, location: city } = User;
+// console.log(name, age, city);
+
+const {email = 'Not Provided' } = User;
+console.log(email)
+
+// array destructuring 
+
+const colors = ['Red','Pink','Green'];
+
+const [ first, second ] = colors;
+console.log(first,second)
+
+const [ , , third ] = colors;
+console.log(third)
