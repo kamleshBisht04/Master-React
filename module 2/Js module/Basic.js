@@ -667,33 +667,70 @@
 
 // =====================================================
 
-let cart = ["Milk", "Bread", "Butter", "Eggs", "Juice"]; 
+// let cart = ["Milk", "Bread", "Butter", "Eggs", "Juice"]; 
 
-console.log(cart)
+// console.log(cart)
 
-const preview = cart.slice(1,3);
-console.log(preview)
-console.log(cart)
+// const preview = cart.slice(1,3);
+// console.log(preview)
+// console.log(cart)
 
-// splice change the value of array 
-// modifing the existing array 
+// // splice change the value of array 
+// // modifing the existing array 
 
-let items = ["Pen", "Pencil", "Notebook", "Eraser", "Sharpener"];
+// let items = ["Pen", "Pencil", "Notebook", "Eraser", "Sharpener"];
 
-console.log(items)
+// console.log(items)
 
-items.splice(2,1)
+// items.splice(2,1)
 
-console.log(items)
+// console.log(items)
 
-// adding the items
-items.splice(1,0,'Marker')
-console.log(items)
+// // adding the items
+// items.splice(1,0,'Marker')
+// console.log(items)
 
-items.splice(2,2,'Scale','Ruler')
-console.log(items)
+// items.splice(2,2,'Scale','Ruler')
+// console.log(items)
+
+// =====================================================
+
+// Mastering Spread & Rest Operators in JavaScript 
+
+const nums = [1,2,3];
+const copy = [...nums,4];
+console.log(copy)
+
+const newStudent = {
+    name:'Ajay'
+}
+
+const copy1 = {...newStudent,'age':28}
+console.log(copy1)
 
 
+const a = [1,2,3];
+const b = [4,5,6];
+const merge = [...a,...b];
+console.log(merge)
+
+function sum(a,b,c){
+    return a+b+c;
+}
+const values = [1,2,3];
+console.log(sum(...values));
+
+// Rest Operator
+// packing of data into array 
+
+function logAll(...items){
+ console.log(items)
+}
+logAll("Pen","Pencil","Eraser")
+
+
+const [first,second ,...rest]  = [10,20,30,40];
+console.log(first,second,rest)
 
 
 
