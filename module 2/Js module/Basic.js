@@ -738,45 +738,122 @@
 
 // Condition ? '' : '';
 
-const age = 40;
-const status =  age >= 18 ? 'Adult' : 'Minor';
-console.log(status)
+// const age = 40;
+// const status =  age >= 18 ? 'Adult' : 'Minor';
+// console.log(status)
 
-if(age >= 18){
-    return 'Adult'
-}else{
-    return 'Minor'
-}
+// if(age >= 18){
+//     return 'Adult'
+// }else{
+//     return 'Minor'
+// }
 
 // short circuiting in java scripting
 
-const input = "" || "Default Value"
-console.log(input)
+// const input = "" || "Default Value"
+// console.log(input)
 
-const isLoggedIN = false;
-isLoggedIN && console.log("Welcome back")
+// const isLoggedIN = false;
+// isLoggedIN && console.log("Welcome back")
 
-// =====================================================
+// // =====================================================
 
-// Boolean Values in JS
-// 0 -> False
-// 1 -> True
+// // Boolean Values in JS
+// // 0 -> False
+// // 1 -> True
 
 
-if (0) console.log("Won't Run!");    
-if ("") console.log("Won't Run!");    
-if (null) console.log("Won't Run!");  
-if (undefined) console.log("Won't Run!");
+// if (0) console.log("Won't Run!");    
+// if ("") console.log("Won't Run!");    
+// if (null) console.log("Won't Run!");  
+// if (undefined) console.log("Won't Run!");
 
-if (1) console.log("Runs!");  
-if ("Hello") console.log("Runs!");  
-if (42) console.log("Runs!");       
-if ([]) console.log("Runs!");    
-if ({}) console.log("Runs!");   
-console.log(typeof [])
+// if (1) console.log("Runs!");  
+// if ("Hello") console.log("Runs!");  
+// if (42) console.log("Runs!");       
+// if ([]) console.log("Runs!");    
+// if ({}) console.log("Runs!");   
+// console.log(typeof [])
 
-console.log(Boolean(0))
-console.log(Boolean(1))
-console.log(Boolean(""))
-console.log(Boolean(undefined))
-console.log(Boolean(null))
+// console.log(Boolean(0))
+// console.log(Boolean(1))
+// console.log(Boolean(""))
+// console.log(Boolean(undefined))
+// console.log(Boolean(null))
+
+// ===================================================
+
+// JS Prototype & Inheritence
+
+// Few Examples
+// const arr = [1, 2, 3];
+// Array.prototype.sayHello = function () {
+//   return "sayHello...";
+// };
+// Array.prototype.last = function () {
+//   return this[this.length - 1];
+// };
+// console.log(arr.last());
+
+// console.log(arr.__proto__);
+// Arr -> Array.prototype -> Object.prototype -> null
+// function Person(name) {
+//   this.name = name;
+// }
+// Person.prototype.greet = function () {
+//   return `Hello ${this.name}`;
+// };
+
+// const user = new Person("Ajay");
+// console.log(user.__proto__);
+
+// Using Object.create() for Inheritance
+// const userModule = {
+//   sayHi: function () {
+//     return `Hello ${this.name}`;
+//   },
+// };
+// const user2 = Object.create(userModule);
+// user2.name = "Ajay";
+// console.log(user2.sayHi());
+
+// Tranditional way - Inheritance
+
+// function Animal(name) {
+//   this.name = name;
+// }
+// Animal.prototype.walk = function () {
+//   return `${this.name} is walking`;
+// };
+// function Dog(name) {
+//   this.name = name;
+// }
+// Dog.prototype = Object.create(Animal.prototype);
+// Dog.prototype.bark = function () {
+//   return `${this.name} is barking`;
+// };
+
+// const dog = new Dog("Tommy");
+// console.log(dog.bark());
+// console.log(dog.walk());
+
+// // Transition to ES6 Classes
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  walk() {
+    return `${this.name} is walking`;
+  }
+}
+class Dog extends Animal {
+  bark() {
+    return `${this.name} is barking`;
+  }
+}
+
+const dog = new Dog("Tommy");
+console.log(dog.bark());
+console.log(dog.walk());
+
