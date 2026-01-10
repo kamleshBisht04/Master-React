@@ -590,7 +590,7 @@
 
 // quesiton 78
 
-// let x; 
+// let x;
 // console.log(x);
 // x = 20;
 
@@ -620,20 +620,19 @@
 // const user = {
 //     name: 'Aman Bhoria!',
 //     logMessage() {
-//         console.log(this.name); // What is logged? 
+//         console.log(this.name); // What is logged?
 //     }
-// }; 
+// };
 // setTimeout(user.logMessage(), 1000);
-
 
 //  quesiton 81
 
 // const user = {
 //     name: 'Aman Bhoria!',
 //     logMessage() {
-//         console.log(this.name); // What is logged? 
+//         console.log(this.name); // What is logged?
 //     }
-// }; 
+// };
 // setTimeout(user.logMessage, 1000);
 
 //  quesiton 82
@@ -656,12 +655,390 @@
 
 //  quesiton 84
 
-function printName(firstName, lastName) {
-    firstName = "Aman";
-    lastName = "Bhoria";
-    return arguments[0] + " " + arguments[1];
-}
+// function printName(firstName, lastName) {
+//     firstName = "Aman";
+//     lastName = "Bhoria";
+//     return arguments[0] + " " + arguments[1];
+// }
 
-let name = printName("John", "Doe");
-console.log(name)
+// let name = printName("John", "Doe");
+// console.log(name)
+
+//  quesiton 85
+// chat gpt questions
+
+// foo();
+// function foo() {
+//   console.log("Hello");
+// }
+
+//  quesiton 86
+
+// {
+//   var x = 1;
+//   let y = 2;
+// }
+// console.log(x);
+// console.log(y);
+
+//  quesiton 87
+
+// for (var i = 0; i < 3; i++) {}
+// console.log(i);
+
+//  quesiton 88
+
+// for (let i = 0; i < 3; i++) {}
+// console.log(i);
+
+//  quesiton 89
+
+// console.log(1 + "2" + 3);
+
+//  quesiton 90
+// console.log(true + false);
+
+//  quesiton 91
+// console.log([] + []);
+
+//  quesiton 92
+// console.log({} + {});
+
+//  quesiton 93
+// console.log(null == undefined);
+// console.log(null === undefined);
+
+//  quesiton 94
+// console.log([] == false);
+
+//  quesiton 95
+// console.log([] === false);
+
+//  quesiton 96
+// console.log({} == {});
+
+//  quesiton 97
+
+// let a = {};
+// let b = a;
+// console.log(a == b);
+
+//  quesiton 98
+
+// const obj = { a: 1 };
+// obj.a = 2;
+// console.log(obj);
+
+//  quesiton 99 // point to global and window obj
+
+// function test() {
+//   console.log(this);
+// }
+// test();
+
+//  quesiton 100
+
+// const obj = {
+//   a: 10,
+//   test() {
+//     console.log(this.a);
+//   },
+// };
+// obj.test();
+
+//  quesiton 101
+//arrow case undefine
+
+// const obj = {
+//   a: 10,
+//   test: () => {
+//     console.log(this.a);
+//   },
+// };
+// obj.test();
+
+// quesiton 102
+
+// console.log("A");
+// setTimeout(() => console.log("B"), 0);
+// Promise.resolve().then(() => console.log("C"));
+// console.log("D");
+
+// quesiton 103
+
+// console.log(typeof null);
+
+// quesiton 104
+
+// console.log(typeof NaN);
+
+// quesiton 105
+
+// console.log(typeof foo);
+// var foo = function () {};
+
+// quesiton 106
+// let a = 10;
+// {
+//   console.log(a);
+//   let a = 20;
+// }
+// quesiton 107
+//und
+
+// const obj = {
+//   x: 10,
+//   getX() {
+//     return function () {
+//       console.log(this.x);
+//     };
+//   },
+// };
+// obj.getX()();
+
+// quesiton 108
+// function counter() {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     console.log(count);
+//   };
+// }
+
+// const c1 = counter();
+// c1();
+// c1();
+// quesiton 109
+
+// let x = 10;
+// function test() {
+//   console.log(x);
+//   let x = 20;
+// }
+// test();
+
+// quesiton 110
+
+// Promise.resolve()
+//   .then(() => {
+//     console.log(1);
+//     return Promise.resolve(2);
+//   })
+//   .then(console.log);
+
+// console.log(3);
+
+// quesiton 111
+
+// async function foo() {
+//   console.log(1);
+//   await Promise.resolve();
+//   console.log(2);
+// }
+// foo();
+// console.log(3);
+
+// quesiton 112
+
+// const arr = [1, 2, 3];
+// arr.push(arr);
+// console.log(arr.length);
+
+// quesiton 113
+
+// const a = [1, 2];
+// const b = a;
+// b.push(3);
+// console.log(a);
+
+// quesiton 114
+
+// console.log(0 == false);
+// console.log(0 === false);
+
+// quesiton 115
+// console.log("" == false);
+// quesiton 116
+// const obj = { a: 1 };
+// Object.freeze(obj);
+// obj.a = 2;
+// console.log(obj.a);
+
+// quesiton 117
+// const obj = {
+//   a: 1,
+//   b: {
+//     c: 2,
+//   },
+// };
+// Object.freeze(obj);
+// obj.b.c = 3;
+// console.log(obj.b.c);
+
+// quesiton 118
+
+// const obj = { a: 1 };
+// delete obj.a;
+// // console.log(obj)
+// console.log(obj.a);
+
+// quesiton 119
+
+// const map = new Map();
+// map.set({}, 1);
+// map.set({}, 2);
+// console.log(map.size);
+
+
+// quesiton 120
+
+// Promise.resolve()
+//   .then(() => {
+//     console.log("A");
+//     return Promise.resolve("B");
+//   })
+//   .then(console.log);
+
+// console.log("C");
+
+// quesiton 121
+
+// Promise.resolve()
+//   .then(() => {
+//     console.log(1);
+//     return new Promise(() => {});
+//   })
+//   .then(() => console.log(2));
+
+// console.log(3);
+
+
+// quesiton 122
+
+// setTimeout(() => console.log("T1"), 0);
+
+// Promise.resolve().then(() => {
+//   console.log("P1");
+//   setTimeout(() => console.log("T2"), 0);
+// });
+
+// console.log("S");
+
+
+// quesiton 123
+
+// async function test() {
+//   return 1;
+// }
+
+// test().then(console.log);
+
+// console.log(2);
+
+// quesiton 124
+
+// async function foo() {
+//   console.log("A");
+//   await null;
+//   console.log("B");
+// }
+
+// console.log("C");
+// foo();
+// console.log("D");
+
+// quesiton 124
+
+// function A() {}
+// A.prototype.x = 10;
+
+// const a1 = new A();
+// A.prototype = { x: 20 };
+
+// const a2 = new A();
+
+// console.log(a1.x, a2.x);
+
+// quesiton 125
+
+// const arr = [1, 2, 3];
+// arr[10] = 99;
+// console.log(arr.length);
+
+// quesiton 126
+
+// console.log({} + []);
+// console.log([] + {});
+
+//  quesiton 127
+
+// const set = new Set();
+// set.add(1);
+// set.add("1");
+// set.add(1);
+// console.log(set.size);
+
+//  quesiton 128
+// t
+
+// console.log([] == ![]);
+
+
+//   quesiton 129
+
+// foo();
+// var foo = function () {
+//   console.log("Hello");
+// };
+
+
+// quesiton 130
+
+// const obj = {
+//   x: 10,
+//   getX() {
+//     return function () {
+//       console.log(this.x);
+//     };
+//   },
+// };
+// obj.getX()();
+
+// quesiton 131
+
+// const obj = {
+//   x: 10,
+//   getX() {
+//     return () => {
+//       console.log(this.x);
+//     };
+//   },
+// };
+// obj.getX()();
+
+// quesiton 132
+
+// console.log(null == 0);
+
+
+// quesiton 133
+// 1011
+
+// function outer() {
+//   let x = 10;
+//   return function () {
+//     console.log(x++);
+//   };
+// }
+// const fn = outer();
+// fn();
+// fn();
+
+
+//  quesiton 133
+
+
+
+
+
 
