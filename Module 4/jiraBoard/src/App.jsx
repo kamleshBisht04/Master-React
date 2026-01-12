@@ -1,16 +1,18 @@
 import "./App.css";
+import TaskColumn from "./components/TaskColumn/TaskColumn";
 import TaskForm from "./components/taskForm/TaskForm";
+import check_mark_btn from "../src/assets/check_mark_btn.png";
 
 function App() {
   return (
     <div className="app">
       <h1>Jira Board</h1>
-       <TaskForm/>
+      <TaskForm />
       <div className="app_main">
-        <section className="task_column">Section 1</section>
-        <section className="task_column">Section 2</section>
-        <section className="task_column">Section 3</section>
-        <section className="task_column">Section 4</section>
+        <TaskColumn title="Ready for Devlopment" />
+        <TaskColumn title="In Progress" />
+        <TaskColumn title="Ready for test" />
+        <TaskColumn title="Closed" icon={check_mark_btn} />
       </div>
     </div>
   );
