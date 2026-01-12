@@ -1,0 +1,25 @@
+.app {
+  display: grid;
+  grid-template-rows: 150px auto;
+}
+
+
+
+.app_main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 8%;
+}
+
+.task_column {
+  width: 30%;
+  background-color: red;
+  margin: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem;
+  font-weight: 700;
+  font-size: 3rem;
+}
