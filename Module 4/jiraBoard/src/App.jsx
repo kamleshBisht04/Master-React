@@ -1,7 +1,7 @@
 import "./App.css";
 import TaskColumn from "./components/TaskColumn/TaskColumn";
 import TaskForm from "./components/taskForm/TaskForm";
-import check_mark_btn from "../src/assets/check_mark_btn.png";
+import tickButton from "../src/assets/check_mark_btn.png";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <TaskColumn title="Ready for Devlopment" />
         <TaskColumn title="In Progress" />
         <TaskColumn title="Ready for test" />
-        <TaskColumn title="Closed" icon={check_mark_btn} />
+        <TaskColumn title="Closed" icon={tickButton} />
       </div>
     </div>
   );

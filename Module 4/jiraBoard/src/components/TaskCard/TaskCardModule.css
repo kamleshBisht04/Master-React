@@ -1,0 +1,38 @@
+.taskCard_details {
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #dfe3e6;
+  padding: 5px 6px;
+  margin-top: 1rem;
+}
+
+.card-tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 2px 5px;
+  margin-bottom: 1rem;
+}
+
+.card_tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.card-delete-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.delete_btn {
+  width: 50%;
+  
+}

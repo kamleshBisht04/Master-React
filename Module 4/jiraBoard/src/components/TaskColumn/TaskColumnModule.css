@@ -5,7 +5,7 @@
 .task_column_heading {
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 

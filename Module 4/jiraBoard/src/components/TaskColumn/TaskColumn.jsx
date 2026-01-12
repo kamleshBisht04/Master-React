@@ -1,3 +1,4 @@
+import TaskCard from "../TaskCard/TaskCard";
 import "./TaskColumnModule.css";
 
 function TaskColumn({ title, icon }) {
@@ -8,6 +9,7 @@ function TaskColumn({ title, icon }) {
           {icon && <span>{<img src={icon} alt="checked Button" className="checked_icon" />}</span>}
           {title}
         </h2>
+        <TaskCard />
       </section>
     </>
   );
