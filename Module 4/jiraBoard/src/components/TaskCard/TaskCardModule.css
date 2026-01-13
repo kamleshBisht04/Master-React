@@ -2,7 +2,7 @@
   height: auto;
   border-radius: 5px;
   border: 1px solid #dfe3e6;
-  padding: 5px 6px;
+  padding: 16px 14px;
   margin-top: 1rem;
 }
 
@@ -15,7 +15,6 @@
 .card-title {
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 2px 5px;
   margin-bottom: 1rem;
 }
 
@@ -30,9 +29,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  transition: all 0.1s ease-in-out;
 }
 
 .delete_btn {
-  width: 50%;
-  
+  width: 22%;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.1s ease-in-out;
 }
