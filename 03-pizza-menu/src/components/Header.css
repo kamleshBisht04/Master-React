@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  gap: 1rem;
+  width: 90rem;
+}
+
+.header img {
+  width: 30rem;
+  background-color: transparent;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.header h1 {
+  font-size: 4.2rem;
+  font-weight: 400;
+  color: #edc84b;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header h1::before,
+.header h1::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 4rem;
+  background-color: #edc84b;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+.header h1::before {
+  left: 0rem;
+}
+
+.header h1::after {
+  right: 0rem;
+}
