@@ -1,7 +1,6 @@
 .pizza {
   display: flex;
   gap: 3.2rem;
-  
 }
 
 .pizza img {
@@ -31,14 +30,15 @@
   margin-bottom: auto;
 }
 
-.pizza span {
+.ingredients {
   font-size: 1.4rem;
-  color: #48a46f;
-  font-weight: 700;
+  color: #1C4D8D;
+  font-weight: 500;
+}
+.price{
+  font-size: 1.4rem;
+  color:#8A244B;
+  font-weight: 600;
 }
 
-.ingredients{
-  color: #1B1A55;
-  
-}
 

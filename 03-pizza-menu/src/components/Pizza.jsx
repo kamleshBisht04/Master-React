@@ -9,7 +9,7 @@ function Pizza({ pizzaObj }) {
         <h3>{name}</h3>
         <span className="ingredients">Ingredients :</span>
         <p>{ingredients}</p>
-        <span>{price}</span>
+        <span className="price">{price}</span>
       </div>
     </li>
   );
