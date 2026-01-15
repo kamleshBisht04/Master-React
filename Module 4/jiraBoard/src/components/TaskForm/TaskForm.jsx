@@ -1,25 +1,66 @@
-import Tag from "../tags/Tag";
+import { useState } from "react";
 import "./TaskFormModule.css";
+import Tags from "../Tags/Tags";
+
 function TaskForm() {
+  const [taskData, setTaskData] = useState({
+    query: "",
+    status: "Ready for Devlopment",
+    tags: [],
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setTaskData((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  function handleSelectedTag(tag) {
+    if (taskData.tags.some((tags) => tags === tag)) {
+      const uniqueTag = taskData.tags.filter((tags) => tags !== tag);
+      setTaskData((prev) => {
+        return { ...prev, tags: uniqueTag };
+      });
+    } else {
+      setTaskData((prev) => {
+        return { ...prev, tags: [...prev.tags, tag] };
+      });
+    }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(taskData);
+  }
+
+  // console.log(taskData);
+
   return (
     <header className="app_header">
-      <form>
-        <input type="text" className="task_input" placeholder="Enter Task Details" />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="query"
+          onChange={handleChange}
+          className="task_input"
+          placeholder="Enter Task Details"
+        />
         <div className="task_action">
           <div className="btn_section">
-            <Tag profile={"DEV"}/>
-            <Tag profile={"QA"} />
-            <Tag profile={"Product Owner"}/>
+            <Tags profile={"DEV"} onSelectedTag={handleSelectedTag} />
+            <Tags profile={"QA"} onSelectedTag={handleSelectedTag} />
+            <Tags profile={"Product Owner"} onSelectedTag={handleSelectedTag} />
           </div>
           <div className="action_section">
-            <select className="task_status">
+            <select name="status" onChange={handleChange} className="task_status">
               <option value="Ready for Devlopment">Ready for Devlopment</option>
               <option value="In Progress">In Progress</option>
               <option value="Ready for test">Ready for test</option>
               <option value="Closed">Closed</option>
             </select>
-            <button type="submit" className="btn-submit">
-              + Add
+            <button className="btn-submit">
+              <span>+</span>Add
             </button>
           </div>
         </div>
