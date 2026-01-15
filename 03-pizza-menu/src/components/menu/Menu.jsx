@@ -1,5 +1,5 @@
+import Pizza from "../pizza/Pizza";
 import "./Menu.css";
-import Pizza from "./Pizza";
 
 const pizzaData = [
   {

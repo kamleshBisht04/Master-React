@@ -1,5 +1,5 @@
+import Order from "../order/Order";
 import "./Footer.css";
-import Order from "./Order";
 
 function Footer() {
   const hour = new Date().getHours();
