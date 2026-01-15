@@ -9,6 +9,7 @@
   background-color: transparent;
   border-radius: 10rem;
   cursor: pointer;
+  transform: scale(1) !important;
 }
 
 .header h1 {

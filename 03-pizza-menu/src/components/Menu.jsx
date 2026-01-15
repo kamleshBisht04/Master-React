@@ -49,19 +49,27 @@ const pizzaData = [
 function Menu() {
   const pizzas = pizzaData;
 
+  const numPizzas = pizzas.length;
+
   return (
     <main className="menu">
-      <h2>Our Menu</h2>
-      <p>
-        Authentic Italian Cuisine. 6 creative dishes to choose from. All from our stone oven,
-        organic and finger licking delicious
-      </p>
+      {/* <h2>Our Menu</h2> */}
+      {numPizzas ? (
+        <>
+          <p>
+            Authentic Italian Cuisine. 6 creative dishes to choose from. All from our stone oven,
+            organic and finger licking delicious
+          </p>
 
-      <ul className="Pizzas">
-        {pizzas.map((pizza) => (
-          <Pizza pizzaObj={pizza} key={pizza.name} />
-        ))}
-      </ul>
+          <ul className="Pizzas">
+            {pizzas.map((pizza) => (
+              <Pizza pizzaObj={pizza} key={pizza.name} />
+            ))}
+          </ul>
+        </>
+      ) : (
+        <p>We're still working on our menu. Please come back later :)</p>
+      )}
     </main>
   );
 }
