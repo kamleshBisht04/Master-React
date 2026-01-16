@@ -16,18 +16,33 @@ function TaskForm() {
     });
   };
 
+  const checkSelect = (tag) => {
+    return taskData.tags.some((item) => item === tag);
+  };
+
   function handleSelectedTag(tag) {
-    if (taskData.tags.some((tags) => tags === tag)) {
-      const uniqueTag = taskData.tags.filter((tags) => tags !== tag);
-      setTaskData((prev) => {
-        return { ...prev, tags: uniqueTag };
-      });
-    } else {
-      setTaskData((prev) => {
-        return { ...prev, tags: [...prev.tags, tag] };
-      });
-    }
+    setTaskData((prev) => {
+      const isSelected = prev.tags.includes(tag);
+      const updatedTags = isSelected
+        ? prev.tags.filter((item) => item !== tag)
+        : [...prev.tags, tag];
+
+      return { ...prev, tags: updatedTags };
+    });
   }
+
+  // function handleSelectedTag(tag) {
+  //   if (taskData.tags.some((item) => item === tag)) {
+  //     const filterTag = taskData.tags.filter((item) => item !== tag);
+  //     setTaskData((prev) => {
+  //       return { ...prev, tags: filterTag };
+  //     });
+  //   } else {
+  //     setTaskData((prev) => {
+  //       return { ...prev, tags: [...prev.tags, tag] };
+  //     });
+  //   }
+  // }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -48,9 +63,17 @@ function TaskForm() {
         />
         <div className="task_action">
           <div className="btn_section">
-            <Tags profile={"DEV"} onSelectedTag={handleSelectedTag} />
-            <Tags profile={"QA"} onSelectedTag={handleSelectedTag} />
-            <Tags profile={"Product Owner"} onSelectedTag={handleSelectedTag} />
+            <Tags
+              profile={"DEV"}
+              onSelectedTag={handleSelectedTag}
+              isSelected={checkSelect("DEV")}
+            />
+            <Tags profile={"QA"} onSelectedTag={handleSelectedTag} isSelected={checkSelect("QA")} />
+            <Tags
+              profile={"Product Owner"}
+              onSelectedTag={handleSelectedTag}
+              isSelected={checkSelect("Product Owner")}
+            />
           </div>
           <div className="action_section">
             <select name="status" onChange={handleChange} className="task_status">
