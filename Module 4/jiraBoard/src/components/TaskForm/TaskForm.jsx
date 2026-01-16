@@ -2,12 +2,14 @@ import { useState } from "react";
 import "./TaskFormModule.css";
 import Tags from "../Tags/Tags";
 
+const initialData = {
+  query: "",
+  status: "Ready for Development",
+  tags: [],
+};
+
 function TaskForm({ setTasks }) {
-  const [taskData, setTaskData] = useState({
-    query: "",
-    status: "Ready for Devlopment",
-    tags: [],
-  });
+  const [taskData, setTaskData] = useState(initialData);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,9 +34,11 @@ function TaskForm({ setTasks }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
     setTasks((prev) => {
       return [...prev, taskData];
     });
+    setTaskData(initialData);
   }
 
   // console.log(taskData);
@@ -45,6 +49,7 @@ function TaskForm({ setTasks }) {
         <input
           type="text"
           name="query"
+          value={taskData.query}
           onChange={handleChange}
           className="task_input"
           placeholder="Enter Task Details"
@@ -64,8 +69,13 @@ function TaskForm({ setTasks }) {
             />
           </div>
           <div className="action_section">
-            <select name="status" onChange={handleChange} className="task_status">
-              <option value="Ready for Devlopment">Ready for Devlopment</option>
+            <select
+              name="status"
+              value={taskData.status}
+              onChange={handleChange}
+              className="task_status"
+            >
+              <option value="Ready for Development">Ready for Devlopment</option>
               <option value="In Progress">In Progress</option>
               <option value="Ready for test">Ready for test</option>
               <option value="Closed">Closed</option>

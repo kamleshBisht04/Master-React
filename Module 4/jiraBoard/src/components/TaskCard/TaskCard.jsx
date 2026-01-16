@@ -9,7 +9,7 @@ function TaskCard({ title, tags }) {
       <div className="card-tasks">
         <div className="card_tags">
           {tags.map((tag, index) => (
-            <Tags profile={tag} key={index} />
+            <Tags profile={tag} key={index} isSelected />
           ))}
         </div>
         <div className="card-delete-icon">
