@@ -1,7 +1,7 @@
 import TaskCard from "../TaskCard/TaskCard";
 import "./TaskColumnModule.css";
 
-function TaskColumn({ title, icon, tasks, status }) {
+function TaskColumn({ title, icon, tasks, status, onDeleteTask }) {
   return (
     <>
       <section className="task_column">
@@ -10,8 +10,16 @@ function TaskColumn({ title, icon, tasks, status }) {
           {title}
         </h2>
         {tasks.map(
-          (task, index) =>
-            task.status === status && <TaskCard key={index} title={task.query} tags={task.tags} />
+          (task) =>
+            task.status === status && (
+              <TaskCard
+                key={task.id}
+                title={task.query}
+                tags={task.tags}
+                onDeleteTask={onDeleteTask}
+                id={task.id}
+              />
+            )
         )}
       </section>
     </>

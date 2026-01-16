@@ -13,6 +13,8 @@ function Tags({ profile, onSelectedTag, isSelected }) {
         onSelectedTag(profile);
       }}
     >
+
+      
       {profile}
     </button>
   );

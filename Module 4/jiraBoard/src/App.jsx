@@ -6,15 +6,42 @@ import { useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+
+  function handleDeleteTask(id) {
+    setTasks((prev) => prev.filter((task) => task.id !== id));
+  }
+
   return (
     <div className="app">
       <h1>Jira Board</h1>
       <TaskForm setTasks={setTasks} />
+
       <div className="app_main">
-        <TaskColumn title="Ready for Development" tasks={tasks} status="Ready for Development" />
-        <TaskColumn title="In Progress" tasks={tasks} status="In Progress" />
-        <TaskColumn title="Ready for test" tasks={tasks} status="Ready for test" />
-        <TaskColumn title="Closed" icon={tickButton} tasks={tasks} status="Closed" />
+        <TaskColumn
+          title="Ready for Development"
+          tasks={tasks}
+          status="Ready for Development"
+          onDeleteTask={handleDeleteTask}
+        />
+        <TaskColumn
+          title="In Progress"
+          tasks={tasks}
+          status="In Progress"
+          onDeleteTask={handleDeleteTask}
+        />
+        <TaskColumn
+          title="Ready for test"
+          tasks={tasks}
+          status="Ready for test"
+          onDeleteTask={handleDeleteTask}
+        />
+        <TaskColumn
+          title="Closed"
+          icon={tickButton}
+          tasks={tasks}
+          status="Closed"
+          onDeleteTask={handleDeleteTask}
+        />
       </div>
     </div>
   );

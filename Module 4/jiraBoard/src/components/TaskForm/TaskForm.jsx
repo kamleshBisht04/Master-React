@@ -3,6 +3,7 @@ import "./TaskFormModule.css";
 import Tags from "../Tags/Tags";
 
 const initialData = {
+  id: crypto.randomUUID(),
   query: "",
   status: "Ready for Development",
   tags: [],
@@ -19,7 +20,7 @@ function TaskForm({ setTasks }) {
   };
 
   const checkSelect = (tag) => {
-    return taskData.tags.some((item) => item === tag);
+    return taskData.tags.includes(tag);
   };
 
   function handleSelectedTag(tag) {
@@ -34,9 +35,10 @@ function TaskForm({ setTasks }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!taskData.query.trim() || !taskData.status || taskData.tags.length === 0) return;
 
     setTasks((prev) => {
-      return [...prev, taskData];
+      return [...prev, { ...taskData, id: crypto.randomUUID() }];
     });
     setTaskData(initialData);
   }
@@ -75,7 +77,7 @@ function TaskForm({ setTasks }) {
               onChange={handleChange}
               className="task_status"
             >
-              <option value="Ready for Development">Ready for Devlopment</option>
+              <option value="Ready for Development">Ready for Development</option>
               <option value="In Progress">In Progress</option>
               <option value="Ready for test">Ready for test</option>
               <option value="Closed">Closed</option>
