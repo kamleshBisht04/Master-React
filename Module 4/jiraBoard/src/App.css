@@ -1,12 +1,14 @@
 .app {
   display: grid;
-  grid-template-rows: 150px auto;
+  grid-template-rows: 120px auto;
 }
 
 .app_main {
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 8%;
+  padding: 20px 4%;
+  /* padding: 1rem; */
+  width: 86rem;
 }
 
 

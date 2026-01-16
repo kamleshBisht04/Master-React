@@ -2,14 +2,15 @@ import "./TaskCardModule.css";
 import deleteIcon from "../../assets/delete-button.png";
 import Tags from "../Tags/Tags";
 
-function TaskCard() { 
+function TaskCard({ title, tags }) {
   return (
     <article className="taskCard_details">
-      <p className="card-title">This is simple text</p>
+      <p className="card-title">{title}</p>
       <div className="card-tasks">
         <div className="card_tags">
-          <Tags profile="DEV" />
-          <Tags profile="QA" />
+          {tags.map((tag, index) => (
+            <Tags profile={tag} key={index} />
+          ))}
         </div>
         <div className="card-delete-icon">
           <img src={deleteIcon} alt="delete button" className="delete_btn" />

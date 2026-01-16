@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./TaskFormModule.css";
 import Tags from "../Tags/Tags";
 
-function TaskForm() {
+function TaskForm({ setTasks }) {
   const [taskData, setTaskData] = useState({
     query: "",
     status: "Ready for Devlopment",
@@ -26,27 +26,15 @@ function TaskForm() {
       const updatedTags = isSelected
         ? prev.tags.filter((item) => item !== tag)
         : [...prev.tags, tag];
-
       return { ...prev, tags: updatedTags };
     });
   }
 
-  // function handleSelectedTag(tag) {
-  //   if (taskData.tags.some((item) => item === tag)) {
-  //     const filterTag = taskData.tags.filter((item) => item !== tag);
-  //     setTaskData((prev) => {
-  //       return { ...prev, tags: filterTag };
-  //     });
-  //   } else {
-  //     setTaskData((prev) => {
-  //       return { ...prev, tags: [...prev.tags, tag] };
-  //     });
-  //   }
-  // }
-
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(taskData);
+    setTasks((prev) => {
+      return [...prev, taskData];
+    });
   }
 
   // console.log(taskData);
