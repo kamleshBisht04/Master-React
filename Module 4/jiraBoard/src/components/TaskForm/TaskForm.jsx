@@ -7,7 +7,9 @@ const initialData = {
   query: "",
   status: "Ready for Development",
   tags: [],
+  
 };
+
 
 function TaskForm({ setTasks }) {
   const [taskData, setTaskData] = useState(initialData);

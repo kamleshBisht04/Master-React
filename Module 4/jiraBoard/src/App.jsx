@@ -2,10 +2,16 @@ import "./App.css";
 import TaskColumn from "./components/TaskColumn/TaskColumn";
 import TaskForm from "./components/taskForm/TaskForm";
 import tickButton from "../src/assets/check_mark_btn.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    return JSON.parse(localStorage.getItem("tasks") || []);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   function handleDeleteTask(id) {
     setTasks((prev) => prev.filter((task) => task.id !== id));
