@@ -3,14 +3,15 @@ import TaskCard from "../TaskCard/TaskCard";
 import "./TaskColumnModule.css";
 import DropArea from "../DragArea/DropArea";
 
-function TaskColumn({ title, icon, tasks, status, onDeleteTask, setActiveCard }) {
+function TaskColumn({ title, icon, tasks, status, onDeleteTask, onSetActiveCardId }) {
   return (
     <>
-      <section className="task_column ">
+      <section className="task_column">
         <h2 className="task_column_heading">
           {icon && <span>{<img src={icon} alt="checked Button" className="checked_icon" />}</span>}
           {title}
         </h2>
+
         <DropArea />
         {tasks.map(
           (task) =>
@@ -22,11 +23,11 @@ function TaskColumn({ title, icon, tasks, status, onDeleteTask, setActiveCard })
                   tags={task.tags}
                   onDeleteTask={onDeleteTask}
                   id={task.id}
-                  setActiveCard={setActiveCard}
+                  onSetActiveCardId={onSetActiveCardId}
                 />
                 <DropArea />
               </React.Fragment>
-            )
+            ),
         )}
       </section>
     </>

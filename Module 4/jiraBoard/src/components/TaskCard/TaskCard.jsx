@@ -2,13 +2,13 @@ import "./TaskCardModule.css";
 import deleteIcon from "../../assets/delete-button.png";
 import Tags from "../Tags/Tags";
 
-function TaskCard({ title, tags, onDeleteTask, id, setActiveCard }) {
+function TaskCard({ title, tags, onDeleteTask, id, onSetActiveCardId }) {
   return (
     <article
       className="taskCard_details"
       draggable
-      onDragStart={() => setActiveCard(id)}
-      onDragEnd={() => setActiveCard(id)}
+      onDragStart={() => onSetActiveCardId(id)}
+      onDragEnd={() => onSetActiveCardId(null)}
     >
       <p className="card-title">{title}</p>
       <div className="card-tasks">

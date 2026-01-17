@@ -8,7 +8,10 @@ function App() {
   const [tasks, setTasks] = useState(() => {
     return JSON.parse(localStorage.getItem("tasks") || "[]");
   });
-  const [activeCard, setActiveCard] = useState(null);
+
+  const [activeCardId, setActiveCardId] = useState(null);
+
+  console.log(activeCardId);
 
   function handleDeleteTask(id) {
     setTasks((prev) => prev.filter((task) => task.id !== id));
@@ -28,21 +31,21 @@ function App() {
           tasks={tasks}
           status="Ready for Development"
           onDeleteTask={handleDeleteTask}
-          setActiveCard={setActiveCard}
+          onSetActiveCardId={setActiveCardId}
         />
         <TaskColumn
           title="In Progress"
           tasks={tasks}
           status="In Progress"
           onDeleteTask={handleDeleteTask}
-          setActiveCard={setActiveCard}
+          onSetActiveCardId={setActiveCardId}
         />
         <TaskColumn
           title="Ready for test"
           tasks={tasks}
           status="Ready for test"
           onDeleteTask={handleDeleteTask}
-          setActiveCard={setActiveCard}
+          onSetActiveCardId={setActiveCardId}
         />
         <TaskColumn
           title="Closed"
@@ -50,10 +53,10 @@ function App() {
           tasks={tasks}
           status="Closed"
           onDeleteTask={handleDeleteTask}
-          setActiveCard={setActiveCard}
+          onSetActiveCardId={setActiveCardId}
         />
       </main>
-      <h2>active card {activeCard}</h2>
+      <h2>Active card :{activeCardId}</h2>
     </div>
   );
 }

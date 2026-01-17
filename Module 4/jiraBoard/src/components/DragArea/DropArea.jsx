@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import "./DropArea.css";
+import { useState } from "react";
+import "../DragArea/DropArea.css";
+
 function DropArea() {
   const [showDrop, setShowDrop] = useState(false);
+
   return (
     <section
-      className={`${showDrop ? "drag-area" : "drag-area-hidden"}`}
+      className={showDrop ? "drop-area" : "drop-area-hidden"}
       onDragEnter={() => setShowDrop(true)}
       onDragLeave={() => setShowDrop(false)}
     >
