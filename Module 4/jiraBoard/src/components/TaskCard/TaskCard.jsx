@@ -33,3 +33,9 @@ function TaskCard({ title, tags, onDeleteTask, id, onSetActiveCardId }) {
 }
 
 export default TaskCard;
+
+
+
+
+
+
