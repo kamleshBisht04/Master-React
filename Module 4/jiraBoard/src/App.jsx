@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import "./App.css";
+import"./index.css";
 import TaskColumn from "./components/TaskColumn/TaskColumn";
 import TaskForm from "./components/taskForm/TaskForm";
-import tickButton from "../src/assets/check_mark_btn.png";
-import { useEffect, useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -11,7 +11,26 @@ function App() {
 
   const [activeCardId, setActiveCardId] = useState(null);
 
-  console.log(activeCardId);
+  function handleCardDrop(status, index) {
+    if (!activeCardId) return;
+
+    setTasks((prev) => {
+      const draggedTask = prev.find((task) => task.id === activeCardId);
+      if (!draggedTask) return prev;
+
+      const filtered = prev.filter((task) => task.id !== activeCardId);
+
+      const updatedTask = {
+        ...draggedTask,
+        status,
+      };
+
+      filtered.splice(index, 0, updatedTask);
+      return filtered;
+    });
+
+    setActiveCardId(null);
+  }
 
   function handleDeleteTask(id) {
     setTasks((prev) => prev.filter((task) => task.id !== id));
@@ -21,42 +40,27 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  const STATUS = ["Ready for Development", "In Progress", "Ready for test", "Closed"];
+
   return (
     <div className="app">
       <h1>Jira Board</h1>
+
       <TaskForm setTasks={setTasks} />
+
       <main className="app_main">
-        <TaskColumn
-          title="Ready for Development"
-          tasks={tasks}
-          status="Ready for Development"
-          onDeleteTask={handleDeleteTask}
-          onSetActiveCardId={setActiveCardId}
-        />
-        <TaskColumn
-          title="In Progress"
-          tasks={tasks}
-          status="In Progress"
-          onDeleteTask={handleDeleteTask}
-          onSetActiveCardId={setActiveCardId}
-        />
-        <TaskColumn
-          title="Ready for test"
-          tasks={tasks}
-          status="Ready for test"
-          onDeleteTask={handleDeleteTask}
-          onSetActiveCardId={setActiveCardId}
-        />
-        <TaskColumn
-          title="Closed"
-          icon={tickButton}
-          tasks={tasks}
-          status="Closed"
-          onDeleteTask={handleDeleteTask}
-          onSetActiveCardId={setActiveCardId}
-        />
+        {STATUS.map((status) => (
+          <TaskColumn
+            key={status}
+            title={status}
+            status={status}
+            tasks={tasks}
+            onDeleteTask={handleDeleteTask}
+            onSetActiveCardId={setActiveCardId}
+            onDropCard={handleCardDrop}
+          />
+        ))}
       </main>
-      <h2>Active card :{activeCardId}</h2>
     </div>
   );
 }

@@ -6,7 +6,7 @@
 .app_main {
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 4%;
+  padding: 3px 4%;
   /* padding: 1rem; */
   width: 86rem;
 }

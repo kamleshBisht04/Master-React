@@ -7,24 +7,27 @@ function TaskCard({ title, tags, onDeleteTask, id, onSetActiveCardId }) {
     <article
       className="taskCard_details"
       draggable
-      onDragStart={() => onSetActiveCardId(id)}
+      onDragStart={(e) => {
+        onSetActiveCardId(id);
+        e.dataTransfer.setData("text/plain", id);
+      }}
       onDragEnd={() => onSetActiveCardId(null)}
     >
       <p className="card-title">{title}</p>
+
       <div className="card-tasks">
         <div className="card_tags">
           {tags.map((tag, index) => (
-            <Tags profile={tag} key={index} isSelected />
+            <Tags key={index} profile={tag} isSelected />
           ))}
         </div>
-        <div className="card-delete-icon">
-          <img
-            src={deleteIcon}
-            alt="delete button"
-            className="delete_btn"
-            onClick={() => onDeleteTask(id)}
-          />
-        </div>
+
+        <img
+          src={deleteIcon}
+          alt="delete"
+          className="delete_btn"
+          onClick={() => onDeleteTask(id)}
+        />
       </div>
     </article>
   );

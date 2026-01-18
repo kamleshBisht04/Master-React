@@ -1,36 +1,31 @@
 import React from "react";
 import TaskCard from "../TaskCard/TaskCard";
-import "./TaskColumnModule.css";
 import DropArea from "../DragArea/DropArea";
+import "./TaskColumnModule.css";
 
-function TaskColumn({ title, icon, tasks, status, onDeleteTask, onSetActiveCardId }) {
+function TaskColumn({ title, tasks, status, onDeleteTask, onSetActiveCardId, onDropCard }) {
+  const filteredTasks = tasks.filter((task) => task.status === status);
+
   return (
-    <>
-      <section className="task_column">
-        <h2 className="task_column_heading">
-          {icon && <span>{<img src={icon} alt="checked Button" className="checked_icon" />}</span>}
-          {title}
-        </h2>
+    <section className="task_column">
+      <h2>{title}</h2>
 
-        <DropArea />
-        {tasks.map(
-          (task) =>
-            task.status === status && (
-              <React.Fragment key={task.id}>
-                <TaskCard
-                  key={task.id}
-                  title={task.query}
-                  tags={task.tags}
-                  onDeleteTask={onDeleteTask}
-                  id={task.id}
-                  onSetActiveCardId={onSetActiveCardId}
-                />
-                <DropArea />
-              </React.Fragment>
-            ),
-        )}
-      </section>
-    </>
+      <DropArea onDrop={() => onDropCard(status, 0)} />
+
+      {filteredTasks.map((task, index) => (
+        <React.Fragment key={task.id}>
+          <TaskCard
+            id={task.id}
+            title={task.query}
+            tags={task.tags}
+            onDeleteTask={onDeleteTask}
+            onSetActiveCardId={onSetActiveCardId}
+          />
+
+          <DropArea onDrop={() => onDropCard(status, index + 1)} />
+        </React.Fragment>
+      ))}
+    </section>
   );
 }
 
