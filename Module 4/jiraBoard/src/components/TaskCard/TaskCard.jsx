@@ -14,7 +14,6 @@ function TaskCard({ title, tags, onDeleteTask, id, onSetActiveCardId }) {
       onDragEnd={() => onSetActiveCardId(null)}
     >
       <p className="card-title">{title}</p>
-
       <div className="card-tasks">
         <div className="card_tags">
           {tags.map((tag, index) => (

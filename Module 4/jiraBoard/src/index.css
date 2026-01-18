@@ -6,8 +6,9 @@
 }
 
 body {
-  background-color: #f4f4f4;
-  color: #2b2b2b;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
+  font-weight: 300;
+  color: #444;
+  background-color: #f3f3f3;
 }

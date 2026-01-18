@@ -1,13 +1,14 @@
 .tags {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 600;
   cursor: pointer;
-  padding: 4px 12px;
+  padding: 5px 12px;
   border-radius: 0.313rem;
-  background-color: #fff;  
-  color: #000; 
+  background-color: #1C4D8D;  
+  color: #fff; 
   border: none;
   outline: 0;
   margin-bottom: 0.2rem;
+  text-transform: uppercase;
   
 }

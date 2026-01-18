@@ -6,7 +6,7 @@
 .app_main {
   display: flex;
   justify-content: space-evenly;
-  padding: 3px 4%;
+  padding: 3px 2%;
   /* padding: 1rem; */
   width: 86rem;
 }
@@ -16,4 +16,22 @@ h1 {
   margin: 1.2rem;
   font-weight: 700;
   font-size: 3rem;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  /* background-color: black; */
+  bottom: -1%;
+  left: 40%;
+  height: 100%;
+  width: 20%;
+  z-index: -1;
+  opacity: 0.7;
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  /* transform: scale(1.07,1.05) skewX(-15deg); */
+  transform: scale(1.07, 0.99) skewX(18deg);
+  border-radius: 0rem 2rem;
 }

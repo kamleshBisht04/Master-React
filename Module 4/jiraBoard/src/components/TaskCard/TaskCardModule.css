@@ -1,12 +1,13 @@
 .taskCard_details {
   background-color: #fffdf8;
   border-radius: 0.6rem;
-  padding: 1rem 1.2rem;
+  padding: 1rem 0.8rem;
   margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   min-height: 6rem;
+  width: 17rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,18 +33,10 @@
 
 .card_tags {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.card_tag {
-  background-color: #e0f0ff;
-  color: #0073e6;
-  padding: 0.2rem 0.6rem;
-  border-radius: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
+
 
 .card-delete-icon {
   display: flex;
@@ -53,8 +46,8 @@
 }
 
 .delete_btn {
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   cursor: pointer;
   border-radius: 50%;
   display: flex;
@@ -64,7 +57,7 @@
   transition: all 0.15s ease-in-out;
 }
 
-.delete_btn:hover {
+/* .delete_btn:hover {
   background-color: #c0c0c0;  /* darker gray on hover */
-}
+} */
 

@@ -1,7 +1,7 @@
 export const tagStyle = {
-  DEV: { backgroundColor: "#78B9B5" },
-  QA: { backgroundColor: "#D73535" },
-  PO: { backgroundColor: "#FFD41D" },
+  DEV: { backgroundColor: "#5ec576" },
+  QA: { backgroundColor: "#ff585f" },
+  PO: { backgroundColor: "#ffcb03" },
 };
 
 export const tagMap = {

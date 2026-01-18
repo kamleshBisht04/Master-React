@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import"./index.css";
+import "./index.css";
 import TaskColumn from "./components/TaskColumn/TaskColumn";
 import TaskForm from "./components/taskForm/TaskForm";
 
