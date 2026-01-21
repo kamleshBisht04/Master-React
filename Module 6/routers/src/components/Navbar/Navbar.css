@@ -10,8 +10,16 @@ nav {
   gap: 4rem;
   font-size: 2rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .nav ul li a {
   text-decoration: none;
+  padding: 1px 15px;
+}
+
+.nav ul li .active {
+  background: orange;
+  color: #fff;
+  border-radius: 5px;
 }
