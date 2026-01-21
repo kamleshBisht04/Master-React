@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function SingleProduct() {
   //  it is a hook inside the reacct dom 
-  
+
   const navigate = useNavigate();
   const { id } = useParams();
 

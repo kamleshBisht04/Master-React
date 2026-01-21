@@ -2,12 +2,11 @@ import { Link, Navigate, Outlet } from "react-router-dom";
 
 function Admin() {
   const user = {
-    role: "user",
+    role: "admin",
   };
 
   if (user.role !== "admin") {
     return <Navigate to="/" />;
-
   }
   return (
     <div>

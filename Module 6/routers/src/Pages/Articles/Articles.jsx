@@ -46,7 +46,7 @@ function Articles() {
         {category ?? "All"}
       </h3>
       {filterArticle.map((artical) => (
-        <ul className="articles_list" key={artical.key}>
+        <ul className="articles_list" key={artical.id}>
           <li>Title : {artical.title}</li>
           <li>Viewes :{artical.views}</li>
           <li>Category :{artical.category}</li>

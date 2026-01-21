@@ -1,0 +1,9 @@
+.user ul {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  width: 12rem;
+}
