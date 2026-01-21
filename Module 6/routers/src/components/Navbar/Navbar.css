@@ -1,0 +1,17 @@
+nav {
+  border-bottom: 1px solid rgb(214, 85, 85);
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 4rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+}
