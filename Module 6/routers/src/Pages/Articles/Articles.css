@@ -1,0 +1,13 @@
+.articles_list {
+  margin-bottom: 2rem;
+  width: 18rem;
+  margin: 1.5rem;
+}
+
+.articles_list li {
+  padding: 6px 2rem;
+  list-style: none;
+  background-color: #e98e8e;
+  display: flex;
+  border-radius: 5px;
+}
