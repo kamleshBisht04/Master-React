@@ -1,0 +1,32 @@
+.user-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: antiquewhite;
+  border-radius: 1rem 0.6rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+}
+
+/* Avatar */
+.user-list img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+/* Text area */
+.user-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.user-list li {
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 2px 3px;
+}
