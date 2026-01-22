@@ -11,3 +11,20 @@
   list-style: none;
   margin-bottom: 0.313rem;
 }
+
+.user_list button {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  width: 6rem;
+  background-color: rgb(236, 179, 75);
+  color: #961313;
+  border: 0;
+  padding: 2px 4px;
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.user_list button:hover{
+  background-color: orange;
+  color: #f30808;
+}

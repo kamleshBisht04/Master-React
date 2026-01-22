@@ -15,42 +15,49 @@ function Contact() {
         setIsLoading(true);
         const res = await axios.get("https://jsonplaceholder.typicode.com/users");
         setUsers(res.data);
-        setIsLoading(false);
       } catch (error) {
         setError(error.message);
-        setIsLoading(false);
       } finally {
+        setIsLoading(false);
+
         console.log("ye to pakka chalaga last me ");
       }
     };
     fetchUserData();
   }, []);
 
-  // post request 
-  const handleUser = () => {
-    const newUser = {
-      name,
-      id: crypto.randomUUID(),
-      email: `${name}@gamil.com`,
-      address: {
-        city: "Delhi",
-      },
-    };
-    setUsers([newUser, ...users]);
+  // post request
+  const handleUser = async () => {
+    try {
+      const newUser = {
+        name,
+        email: `${name}@gmail.com`,
+        address: { city: "Delhi" },
+      };
 
-    axios
-      .post("https://jsonplaceholder.typicode.com/users", newUser)
-      .then((res) => setUsers([res.data, ...users]))
-      .catch((error) => {
-        setError(error.message);
-        setUsers(users);
-      });
+      const res = await axios.post("https://jsonplaceholder.typicode.com/users", newUser);
+
+      setUsers((prev) => [res.data, ...prev]);
+      setName("");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  // onDelete
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+      setUsers((prev) => prev.filter((user) => user.id !== id));
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   return (
     <div>
       <div>
-        <input type="text" value={name} onChange={(e) => setName(() => e.target.value)} />
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         <button onClick={handleUser}>Add new user</button>
       </div>
       <h1>Contact us</h1>
@@ -58,7 +65,7 @@ function Contact() {
       {error && <em>{error}</em>}
       <div className="User-container">
         {users.map((user) => (
-          <Users user={user} key={user.id} />
+          <Users user={user} key={user.id} onDeleteUser={handleDelete} />
         ))}
       </div>
     </div>
