@@ -1,7 +1,6 @@
-.User-container {
+.User-container{
   display: flex;
-  gap: 0.2rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  align-items: center;
+
 }

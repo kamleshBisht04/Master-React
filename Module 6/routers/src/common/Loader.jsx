@@ -1,9 +1,16 @@
-import React from "react";
+import "../common/Loader.css";
 
 function Loader() {
   return (
-    <div>
-      <h1>Loader</h1>
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   );
 }

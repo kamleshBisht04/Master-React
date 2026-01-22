@@ -1,14 +1,12 @@
 import "../Admin/Users.css";
 function Users({ user }) {
-    console.log(user)
+  console.log(user);
   return (
-    <div className="user">
-      <ul>
-        <img src={user.img}/>
-        <li>{user.name}</li>
-        <li>{user.email}</li>
-      </ul>
-    </div>
+    <ul className="user_list">
+      <li>{user.name}</li>
+      <li>{user.email}</li>
+      <li>{user.address.city}</li>
+    </ul>
   );
 }
 
