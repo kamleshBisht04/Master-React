@@ -4,8 +4,13 @@
   gap: 1rem;
   background-color: antiquewhite;
   border-radius: 1rem 0.6rem;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+  padding: 1rem 0.6rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.user-list:hover{
+  transform: scaleX();
 }
 
 /* Avatar */
@@ -22,11 +27,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .user-list li {
   font-size: 1rem;
   line-height: 1.4;
   padding: 2px 3px;
+  font-weight: 500;
+  color: rgb(6, 6, 86);
 }
