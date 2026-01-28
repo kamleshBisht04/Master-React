@@ -143,3 +143,17 @@
 // console.log(factorial(6));
 // console.log(factorial(7));
 
+// Generator function
+
+function* counter() {
+  let count = 1;
+  while (true) {
+    yield count++;
+  }
+}
+
+const c = counter();
+
+console.log(c.next().value);
+console.log(c.next().value);
+console.log(c.next().value);
