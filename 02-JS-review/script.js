@@ -388,3 +388,41 @@ console.log(todos);
 todos.then((data) => console.log(data));
 
 console.log("kamlesh");
+
+
+//   this key word wrap the lexical variable 
+
+
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+
+  calcAge: function () {
+    console.log(this); // jonas
+
+    const isMillennial = () => {
+      console.log(this); // ✅ jonas (lexical this)
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    isMillennial();
+  },
+};
+
+jonas.calcAge();const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+
+  calcAge: function () {
+    console.log(this); // jonas
+
+    const isMillennial = () => {
+      console.log(this); // ✅ jonas (lexical this)
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    isMillennial();
+  },
+};
+
+jonas.calcAge();
