@@ -4,14 +4,7 @@ const data = [
     title: "The Lord of the Rings",
     publicationDate: "1954-07-29",
     author: "J. R. R. Tolkien",
-    genres: [
-      "fantasy",
-      "high-fantasy",
-      "adventure",
-      "fiction",
-      "novels",
-      "literature",
-    ],
+    genres: ["fantasy", "high-fantasy", "adventure", "fiction", "novels", "literature"],
     hasMovieAdaptation: true,
     pages: 1216,
     translations: {
@@ -37,13 +30,7 @@ const data = [
     title: "The Cyberiad",
     publicationDate: "1965-01-01",
     author: "Stanislaw Lem",
-    genres: [
-      "science fiction",
-      "humor",
-      "speculative fiction",
-      "short stories",
-      "fantasy",
-    ],
+    genres: ["science fiction", "humor", "speculative fiction", "short stories", "fantasy"],
     hasMovieAdaptation: false,
     pages: 295,
     translations: {},
@@ -147,16 +134,8 @@ function getBook(id) {
 const book = getBook(1);
 book;
 
-const {
-  title,
-  publicationDate,
-  author,
-  genres,
-  hasMovieAdaptation,
-  pages,
-  translations,
-  reviews,
-} = book;
+const { title, publicationDate, author, genres, hasMovieAdaptation, pages, translations, reviews } =
+  book;
 
 console.log(
   title,
@@ -166,7 +145,7 @@ console.log(
   hasMovieAdaptation,
   pages,
   translations,
-  reviews
+  reviews,
 );
 
 console.log(title, author, publicationDate);
@@ -209,7 +188,7 @@ console.log(getYear(publicationDate));
 //  Template literals
 
 const summary = `${title},a ${pages}-page long book, was written by ${author} and published in ${getYear(
-  publicationDate
+  publicationDate,
 )} The book has ${hasMovieAdaptation ? "" : "not "}been adopted as a movie .`;
 summary;
 
@@ -224,7 +203,7 @@ console.log(`The book has ${pagesRange} pages`);
 //  Falsy value  // 6 values
 //  null,undefine,"",false,0,NaN
 
-//&& 
+//&&
 
 // If the first operand evaluates to a falsy value: The && operator immediately returns that falsy value and does not evaluate the second operand.
 
@@ -271,7 +250,7 @@ countreview;
 function getToTotalReviewCount(book) {
   const goodreadsReview = reviews?.goodreads?.reviewsCount;
   const librarythingReview = reviews?.librarything?.reviewsCount ?? 0;
-  console.log(librarythingReview)
+  console.log(librarythingReview);
   return goodreadsReview + librarythingReview;
 }
 console.log(getToTotalReviewCount(book));
@@ -354,16 +333,12 @@ console.log(booksAfterDelete);
 // 3. update book object in the array turnary operator
 
 const booksAfterUpdate = booksAfterDelete.map((book) =>
-  book.id === 1
-    ? { id: 1, title: "India", author: "pandit jawhar lal nehru" }
-    : book
+  book.id === 1 ? { id: 1, title: "India", author: "pandit jawhar lal nehru" } : book,
 );
 
 console.log(booksAfterUpdate);
 
-const update2 = booksAfterUpdate.map((book) =>
-  book.id === 2 ? { ...book, pages: 1210 } : book
-);
+const update2 = booksAfterUpdate.map((book) => (book.id === 2 ? { ...book, pages: 1210 } : book));
 
 console.log(update2);
 
@@ -389,28 +364,10 @@ todos.then((data) => console.log(data));
 
 console.log("kamlesh");
 
-
-//   this key word wrap the lexical variable 
-
+//   this key word wrap the lexical variable
 
 const jonas = {
-  firstName: 'Jonas',
-  year: 1991,
-
-  calcAge: function () {
-    console.log(this); // jonas
-
-    const isMillennial = () => {
-      console.log(this); // ✅ jonas (lexical this)
-      console.log(this.year >= 1981 && this.year <= 1996);
-    };
-
-    isMillennial();
-  },
-};
-
-jonas.calcAge();const jonas = {
-  firstName: 'Jonas',
+  firstName: "Jonas",
   year: 1991,
 
   calcAge: function () {
