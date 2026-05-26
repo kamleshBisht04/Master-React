@@ -145,15 +145,15 @@
 
 // Generator function
 
-function* counter() {
-  let count = 1;
-  while (true) {
-    yield count++;
-  }
-}
+// function* counter() {
+//   let count = 1;
+//   while (true) {
+//     yield count++;
+//   }
+// }
 
-const c = counter();
+// const c = counter();
 
-console.log(c.next().value);
-console.log(c.next().value);
-console.log(c.next().value);
+// console.log(c.next().value);
+// console.log(c.next().value);
+// console.log(c.next().value);
