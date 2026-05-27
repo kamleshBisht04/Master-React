@@ -378,45 +378,142 @@
 
 // ===============================================
 
-const AirIndia = {
-  airline: "AirIndia",
-  iataCode: "AI",
-  booking: [],
+// const AirIndia = {
+//   airline: "AirIndia",
+//   iataCode: "AI",
+//   booking: [],
 
-  book(name, flightNo) {
-    console.log(
-      `${name} is book there seet on ${this.airline},flight ${this.iataCode} and flight no is ${flightNo}`,
-    );
+//   book(name, flightNo) {
+//     console.log(
+//       `${name} is book there seet on ${this.airline},flight ${this.iataCode} and flight no is ${flightNo}`,
+//     );
 
-    this.booking.push({
-      name: name,
-      flight: `${(this.airline, flightNo)}`,
-    });
-    console.log(this.booking);
-  },
-};
+//     this.booking.push({
+//       name: name,
+//       flight: `${(this.airline, flightNo)}`,
+//     });
+//     console.log(this.booking);
+//   },
+// };
 
-AirIndia.book("kamlesh", 4525);
-AirIndia.book("jay", 4525);
+// AirIndia.book("kamlesh", 4525);
+// AirIndia.book("jay", 4525);
 
-const Indigo = {
-  airline: "Indigo",
-  iataCode: "6E",
-  booking: [],
-};
+// const Indigo = {
+//   airline: "Indigo",
+//   iataCode: "6E",
+//   booking: [],
+// };
 
-AirIndia.book.call(Indigo, "suman", 4141);
-AirIndia.book.call(Indigo, "sanjay", 4141);
+// AirIndia.book.call(Indigo, "suman", 4141);
+// AirIndia.book.call(Indigo, "sanjay", 4141);
 
-// apply method
+// // apply method
 
-AirIndia.book.apply(Indigo, ["saroj", 4252]);
-customer_data = ["jay chandra", 4242];
+// AirIndia.book.apply(Indigo, ["saroj", 4252]);
+// customer_data = ["jay chandra", 4242];
 
-AirIndia.book.apply(Indigo, customer_data);
+// AirIndia.book.apply(Indigo, customer_data);
 
-// bind method
+// // bind method
 
-const bookingIndigo = AirIndia.book.bind(Indigo);
+// const bookingIndigo = AirIndia.book.bind(Indigo);
 
-bookingIndigo("hement singh", 758595);
+// bookingIndigo("hement singh", 758595);
+
+// ===============================================
+
+// function shadowing
+
+// function greet() {
+//   console.log("hello welcome to javaScript");
+// }
+
+// function outer() {
+//   function greet() {
+//     console.log("Welcome to javaScript Runtime ...");
+//   }
+
+//   greet();
+// }
+
+// greet();
+
+// outer();
+
+// ===============================================
+// tco tail call  optimization
+// function factorial(n) {
+//   if (n === 1) return 1;
+//   return n * factorial(n - 1);
+// }
+
+// console.log(factorial(5));
+// console.log(factorial(6));
+
+// function factorial(n, acc = 1) {
+//   if (n === 1) return acc;
+//   return factorial(n - 1, n * acc);
+// }
+
+// console.log(factorial(5));
+// console.log(factorial(6));
+
+// ===============================================
+
+// factory function
+// A factory function is a function that returns an object.
+// Instead of using the new keyword or classes, factory functions create and return objects manually.
+
+// const createUser = (name, age) => {
+//   return {
+//     name,
+//     age,
+//     greet() {
+//       console.log(`welcom to you ${this.name}, your age is ${this.age}`);
+//     },
+//   };
+// };
+
+// const user =createUser("kamlesh", 30);
+// user.greet();
+
+// ===============================================
+// method chaining
+
+// const calculator ={
+//   value : 0,
+
+//    add(num) {
+//     this.value += num;
+//     return this;
+//   },
+//    sub(num) {
+//     this.value -= num;
+//     return this;
+//   },
+//    mult(num) {
+//     this.value *= num;
+//     return this;
+//   },
+//    divide(num) {
+//     this.value /= num;
+//     return this;
+//   }
+// }
+
+// const result = calculator.add(5).sub(2).mult(6).divide(2);
+// console.log(result.value);
+
+// ===============================================
+// method chaining
+
+// const balance = [200, 400, -700, 0, 566, 200, 400, -600, 1200, 25, 200, 1500];
+
+// const total_amount = balance.map((bal)=> bal*2).filter((bal) => bal > 0).reduce((sum, bal) => bal + sum, 0);
+
+// console.log(total_amount);
+
+// ===============================================
+
+// object 
