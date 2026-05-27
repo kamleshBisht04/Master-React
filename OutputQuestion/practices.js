@@ -516,4 +516,52 @@
 
 // ===============================================
 
-// object 
+// object
+//1 way
+
+const user = {
+  name: "Kamlesh",
+  age: 22,
+  city: "Gurgaon",
+
+  greet() {
+    console.log("Hello!");
+  },
+};
+
+console.log(user);
+
+console.log(user.name);
+console.log(user["age"]);
+console.log(user["city"]);
+user.greet();
+
+//2 way
+
+const person = new Object();
+((person.name = "kamlesh"), (person.age = 25));
+console.log(person);
+
+//3 way
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+const p1 = new Person("John", 25);
+
+console.log(p1.name);
+
+//4 way es6 class
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+const p1 = new Person("John", 25);
+
+console.log(p1.age);
