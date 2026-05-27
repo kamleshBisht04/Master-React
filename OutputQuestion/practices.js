@@ -358,21 +358,65 @@
 
 // generating function
 
-function* countUpTo(n) {
-  let i = 0;
-  while (i <= n) {
-    yield i;
-    i++;
-  }
-  console.log(i);
-}
+// function* countUpTo(n) {
+//   let i = 0;
+//   while (i <= n) {
+//     yield i;
+//     i++;
+//   }
+//   console.log(i);
+// }
 
-const gen = countUpTo(5);
+// const gen = countUpTo(5);
 
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
 
+// ===============================================
+
+const AirIndia = {
+  airline: "AirIndia",
+  iataCode: "AI",
+  booking: [],
+
+  book(name, flightNo) {
+    console.log(
+      `${name} is book there seet on ${this.airline},flight ${this.iataCode} and flight no is ${flightNo}`,
+    );
+
+    this.booking.push({
+      name: name,
+      flight: `${(this.airline, flightNo)}`,
+    });
+    console.log(this.booking);
+  },
+};
+
+AirIndia.book("kamlesh", 4525);
+AirIndia.book("jay", 4525);
+
+const Indigo = {
+  airline: "Indigo",
+  iataCode: "6E",
+  booking: [],
+};
+
+AirIndia.book.call(Indigo, "suman", 4141);
+AirIndia.book.call(Indigo, "sanjay", 4141);
+
+// apply method
+
+AirIndia.book.apply(Indigo, ["saroj", 4252]);
+customer_data = ["jay chandra", 4242];
+
+AirIndia.book.apply(Indigo, customer_data);
+
+// bind method
+
+const bookingIndigo = AirIndia.book.bind(Indigo);
+
+bookingIndigo("hement singh", 758595);
