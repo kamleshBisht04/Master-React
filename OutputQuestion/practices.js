@@ -519,49 +519,242 @@
 // object
 //1 way
 
-const user = {
-  name: "Kamlesh",
-  age: 22,
-  city: "Gurgaon",
+// const user = {
+//   name: "Kamlesh",
+//   age: 22,
+//   city: "Gurgaon",
 
-  greet() {
-    console.log("Hello!");
-  },
-};
+//   greet() {
+//     console.log("Hello!");
+//   },
+// };
 
-console.log(user);
+// console.log(user);
 
-console.log(user.name);
-console.log(user["age"]);
-console.log(user["city"]);
-user.greet();
+// console.log(user.name);
+// console.log(user["age"]);
+// console.log(user["city"]);
+// user.greet();
 
-//2 way
+// //2 way
 
-const person = new Object();
-((person.name = "kamlesh"), (person.age = 25));
-console.log(person);
+// const person = new Object();
+// ((person.name = "kamlesh"), (person.age = 25));
+// console.log(person);
 
-//3 way
+// //3 way
 
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// const p1 = new Person("John", 25);
+
+// console.log(p1.name);
+
+// //4 way es6 class
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// const p1 = new Person("John", 25);
+
+// console.log(p1.age);
+
+//  5 ways =>Object.create();
+
+// const student = {
+//   studentInfo(name, age) {
+//     console.log(`student name is ${this.name} and age is ${this.age}`);
+//   },
+// };
+
+// const s1 = Object.create(student);
+// s1.name = "kamlesh";
+// s1.age = 30;
+// s1.studentInfo();.
+
+// factory method
+
+// const student = (name, age) => {
+//   return {
+//     name,
+//     age,
+//     studentInfo() {
+//       console.log(`student name is ${this.name} and age is ${this.age}`);
+//     },
+//   };
+// };
+
+// const s1 = student("kamlesh", 30);
+// s1.studentInfo();
+
+// student("kamlesh", 30).studentInfo();
+
+// ===============================================
+
+// clone the object
+
+// const user = {
+//   name: "kamlesh",
+//   age: 30,
+//   marks: {
+//     science: 80,
+//     math: 50,
+//     english: 80,
+//   },
+//   address: {
+//     city: "Almora",
+//     pincode: 263663,
+//   },
+// };
+
+//  1 way to clone desturucturing
+
+// const user2 = { ...user };
+
+//  2 way Object.assign
+
+// const user2 = Object.assign({}, user);
+
+// console.log(user);
+// console.log(user2);
+
+// user2.age = 29;
+// user2.marks.math = 76;
+// user2.address.city = "Ranikhet";
+
+// console.log(user);
+// console.log(user2);
+
+// deep copy
+
+// const user3 = structuredClone(user);
+
+// 2 way
+
+// const user3 = JSON.parse(JSON.stringify(user));
+
+// user3.age = 35;
+// user3.marks.math = 33;
+// user3.address.city = "Gairar";
+
+// console.log(user);
+// console.log(user3);
+
+// ===============================================
+
+// const marks = [50, 66, 45, 85, 96, 85, 96, 93, 82, 15, 86, 82, 37, 76, 95, 77];
+
+// const [first, second, third, ...other] = marks;
+// console.log(first, second, third, other);
+
+//  object destrucring
+
+// const user = {
+//   name: "Kamlesh",
+//   age: 22,
+//   city: "Gurgaon",
+// };
+
+// const { name, age, city } = user;
+
+// console.log(name, age, city);
+
+// ===============================================
+// computed property []
+
+// const key = "name";
+
+// const user = {
+//   [key]: "kamlesh",
+// };
+
+// console.log(user.name);
+
+// ===============================================
+// object.freeze
+
+// const user = {
+//   name: "Kamlesh",
+//   age: 22,
+// };
+
+// Object.freeze(user);
+
+// user.name = "Rahul"; // won't change
+// user.city = "Delhi"; // won't add
+// delete user.age; // won't delete
+
+// console.log(user);
+
+// ===============================================
+
+//  object.seal
+// const user = {
+//   name: "Kamlesh",
+//   age: 22,
+// };
+
+// Object.seal(user);
+
+// user.name = "sonam singh";
+
+// user.age = 25; // ✅ allowed
+// user.city = "Delhi"; // ❌ not allowed
+// delete user.name; // ❌ not allowed
+
+// console.log(user);
+
+// ===============================================
+
+//set
+
+const ordersSet = new Set(["Pasta", "Pizza", "Pizza", "Risotto", "Pasta", "Pizza"]);
+
+console.log(ordersSet);
+
+ordersSet.add("Garlic Bread");
+ordersSet.add("Garlic Bread");
+
+console.log(ordersSet);
+
+ordersSet.delete("Risotto");
+
+console.log(ordersSet);
+
+console.log(ordersSet.size);
+
+for (const order of ordersSet) {
+  console.log(order);
 }
 
-const p1 = new Person("John", 25);
+// map
 
-console.log(p1.name);
+const restaurant = new Map();
 
-//4 way es6 class
+restaurant.set("name", "Classico Italiano");
+restaurant.set(1, "Firenze, Italy");
+restaurant.set(2, "Lisbon, Portugal");
+restaurant.set("categories", ["Italian", "Pizzeria", "Vegetarian"]);
 
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+console.log(restaurant);
+
+console.log(restaurant.get("name"));
+
+console.log(restaurant.has("categories"));
+
+restaurant.delete(2);
+
+console.log(restaurant);
+
+console.log(restaurant.size);
+
+for (const [key, value] of restaurant) {
+  console.log(key, value);
 }
-
-const p1 = new Person("John", 25);
-
-console.log(p1.age);
