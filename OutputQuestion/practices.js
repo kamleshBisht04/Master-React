@@ -715,46 +715,154 @@
 
 //set
 
-const ordersSet = new Set(["Pasta", "Pizza", "Pizza", "Risotto", "Pasta", "Pizza"]);
+// const ordersSet = new Set(["Pasta", "Pizza", "Pizza", "Risotto", "Pasta", "Pizza"]);
 
-console.log(ordersSet);
+// console.log(ordersSet);
 
-ordersSet.add("Garlic Bread");
-ordersSet.add("Garlic Bread");
+// ordersSet.add("Garlic Bread");
+// ordersSet.add("Garlic Bread");
 
-console.log(ordersSet);
+// console.log(ordersSet);
 
-ordersSet.delete("Risotto");
+// ordersSet.delete("Risotto");
 
-console.log(ordersSet);
+// console.log(ordersSet);
 
-console.log(ordersSet.size);
+// console.log(ordersSet.size);
 
-for (const order of ordersSet) {
-  console.log(order);
-}
+// for (const order of ordersSet) {
+//   console.log(order);
+// }
 
+// ===============================================
 // map
 
-const restaurant = new Map();
+// const restaurant = new Map();
 
-restaurant.set("name", "Classico Italiano");
-restaurant.set(1, "Firenze, Italy");
-restaurant.set(2, "Lisbon, Portugal");
-restaurant.set("categories", ["Italian", "Pizzeria", "Vegetarian"]);
+// restaurant.set("name", "Classico Italiano");
+// restaurant.set(1, "Firenze, Italy");
+// restaurant.set(2, "Lisbon, Portugal");
+// restaurant.set("categories", ["Italian", "Pizzeria", "Vegetarian"]);
 
-console.log(restaurant);
+// console.log(restaurant);
 
-console.log(restaurant.get("name"));
+// console.log(restaurant.get("name"));
 
-console.log(restaurant.has("categories"));
+// console.log(restaurant.has("categories"));
 
-restaurant.delete(2);
+// restaurant.delete(2);
 
-console.log(restaurant);
+// console.log(restaurant);
 
-console.log(restaurant.size);
+// console.log(restaurant.size);
 
-for (const [key, value] of restaurant) {
-  console.log(key, value);
-}
+// for (const [key, value] of restaurant) {
+//   console.log(key, value);
+// }
+
+// ===============================================
+
+// weekmap
+// key is object and not iterable value can be anything
+
+// when we null the key  GC is working and remove it immiditly
+
+// const student = new WeakMap();
+
+// let user = {
+//   name: "kamlesh",
+// };
+
+// student.set(user, "LogIn");
+
+// console.log(student);
+
+// user = null;
+// console.log(student);
+
+// ===============================================
+
+//  weakSet
+
+// const student = new WeakSet();
+
+// let obj1 = {
+//   name: "kamlesh",
+//   age: 25,
+// };
+
+// let obj2 = {
+//   name: "priyanka",
+//   age: 28,
+// };
+
+// student.add(obj1);
+// student.add(obj2);
+
+// console.log(student);
+
+// obj1 = null;
+
+// console.log(student);
+
+// ===============================================
+// prototype
+
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// Person.prototype.sayHi = function () {
+//   console.log(`person name is : ${this.name} and age is  : ${this.age}`);
+// };
+
+// const person1 = new Person("kamlesh", 25);
+// console.log(person1);
+// person1.sayHi();
+
+// ===============================================
+// // __proto__
+// const user = {
+//   name: "Kamlesh",
+// };
+
+// console.log(user.__proto__);
+
+// ===============================================
+// prototye inheritance
+// const animal = {
+//   eats: true,
+
+//   walk() {
+//     console.log("Animal walks");
+//   },
+// };
+
+// const dog = Object.create(animal);
+
+// dog.bark = function () {
+//   console.log("Dog barks");
+// };
+
+// console.log(dog.eats); // inherited
+// dog.walk(); // inherited
+// dog.bark(); // own method
+
+// ===============================================
+
+// constructor function
+//  is use to create multiple object haveing same properties and behaviour
+
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// const person1 = new Person("kamlesh", 28);
+// const person2 = new Person("jay singh ", 30);
+
+// console.log(person1);
+// console.log(person2);
+
+// ===============================================
