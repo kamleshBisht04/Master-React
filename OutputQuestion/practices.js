@@ -866,3 +866,80 @@
 // console.log(person2);
 
 // ===============================================
+// class
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   sayHi() {
+//     console.log(`student name is ${this.name} and age is ${this.age}`);
+//   }
+// }
+
+// const person1 = new Person("kamlesh", 30);
+// person1.sayHi();
+
+// ===============================================
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// class Student extends Person {
+//   constructor(name, age, course) {
+//     super(name, age); // calls Person constructor
+
+//     this.course = course;
+//   }
+// }
+
+// const s1 = new Student("Kamlesh", 25, "JavaScript");
+
+// console.log(s1);
+
+// ===============================================
+
+// class Animal {
+//   speak() {
+//     console.log("Animal speaks");
+//   }
+// }
+
+// class Dog extends Animal {
+//   speak() {
+//     super.speak(); // parent method
+//     console.log("Dog barks");
+//   }
+// }
+
+// const d1 = new Dog();
+
+// d1.speak();
+// ===============================================
+
+//  static method
+//  no need to create object
+
+// class Person {
+//   static greet() {
+//     console.log("Hello from static method");
+//   }
+// }
+
+// Person.greet();
+
+// ===============================================
+
+//  how to merge an array 
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+
+// const merged = [...arr1, ...arr2];
+
+// console.log(merged);
