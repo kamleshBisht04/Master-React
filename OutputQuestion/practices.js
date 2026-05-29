@@ -935,7 +935,7 @@
 
 // ===============================================
 
-//  how to merge an array 
+//  how to merge an array
 
 // const arr1 = [1, 2, 3];
 // const arr2 = [4, 5, 6];
@@ -943,3 +943,42 @@
 // const merged = [...arr1, ...arr2];
 
 // console.log(merged);
+
+//=================================================
+// Array.from
+
+// const numbers = Array.from({ length: 10 }, (_, i) => i + 1);
+// console.log(numbers);
+
+// const array = Array.from("kamlesh");
+// console.log(array);
+
+//=================================================
+
+// Array.flat
+
+// const arr = [1, 2, [3, 4]];
+
+// console.log(arr.flat());
+
+// //  2 level deep
+
+// const arr1 = [1, 2, [3, [4, 5]]];
+
+// console.log(arr1.flat(2));
+
+// //  infintty for multiple
+
+// const arr3 = [1, [2, [3, [4 ,[5,[6,[7,[8,[9]]]]]]]]];
+
+// console.log(arr3.flat(Infinity));
+
+//=================================================
+// flatemap
+
+// const arr5 = [2, 5, [2, 3, [7, 8, 9, [1, 2, 3, [4, 5, 6]]]]];
+
+// const result = arr5.flat(Infinity).map((num) => num * 2);
+// console.log(result);
+
+//=================================================
