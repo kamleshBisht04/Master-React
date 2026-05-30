@@ -89,3 +89,21 @@
 // console.log(str);
 
 // ===================================================
+// Count Vowels
+
+const countVouwl = (str) => {
+  let count = 0;
+  const vowel = "aeiouAEIOU";
+
+  for (let char of str) {
+    if (vowel.includes(char)) {
+      count++;
+    }
+  }
+  return count;
+};
+
+const totalVowel = countVouwl("appleAppLE");
+console.log(totalVowel);
+
+// ===================================================
