@@ -63,12 +63,29 @@
 // ================================
 // leap year
 
-const year = 2000;
+// const year = 2000;
 
-if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-  console.log(`${year} is leap year`);
-} else {
-  console.log(`${year} is normal year`);
-}
+// if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//   console.log(`${year} is leap year`);
+// } else {
+//   console.log(`${year} is normal year`);
+// }
 
+// ===================================================
 
+// // Reverse a string.
+
+// const sentance = "hello this is kamlesh !";
+
+// // const reverseStr = sentance.split("").reverse().join("");
+// // console.log(reverseStr);
+
+// let str = "";
+
+// for (let i = sentance.length - 1; i >= 0; i--) {
+//   str += sentance[i];
+// }
+// console.log("reverse string")
+// console.log(str);
+
+// ===================================================
