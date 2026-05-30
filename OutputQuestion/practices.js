@@ -957,28 +957,67 @@
 
 // Array.flat
 
-// const arr = [1, 2, [3, 4]];
+const arr = [1, 2, [3, 4]];
 
-// console.log(arr.flat());
+console.log(arr.flat());
 
-// //  2 level deep
+//  2 level deep
 
-// const arr1 = [1, 2, [3, [4, 5]]];
+const arr1 = [1, 2, [3, [4, 5]]];
 
-// console.log(arr1.flat(2));
+console.log(arr1.flat(2));
 
-// //  infintty for multiple
+//  infintty for multiple
 
-// const arr3 = [1, [2, [3, [4 ,[5,[6,[7,[8,[9]]]]]]]]];
+const arr3 = [1, [2, [3, [4, [5, [6, [7, [8, [9]]]]]]]]];
 
-// console.log(arr3.flat(Infinity));
+console.log(arr3.flat(Infinity));
 
 //=================================================
-// flatemap
 
-// const arr5 = [2, 5, [2, 3, [7, 8, 9, [1, 2, 3, [4, 5, 6]]]]];
+// promisss
+// this is promiss and how to consume it ....
 
-// const result = arr5.flat(Infinity).map((num) => num * 2);
-// console.log(result);
+const promise = new Promise((resolve, reject) => {
+  const success = true;
+
+  if (success) {
+    resolve("This promise is resolve");
+  } else {
+    reject("This promise is reject....");
+  }
+});
+
+console.log(promise);
+
+promise
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+//=================================================
+
+fetch("https://api/example.co/user")
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
+
+//=================================================
+//   With async/await
+
+const fetchUserData = async () => {
+  try {
+    const res = await fetch(`https://api/example.co/user`);
+    const data = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error.message);
+  } finally {
+    console.log("It will executed always......");
+  }
+};
 
 //=================================================
