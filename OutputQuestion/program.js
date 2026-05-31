@@ -173,3 +173,100 @@
 // console.log(checkPaliandrome('racar'));
 
 // ===================================================
+// factorial of number
+
+// function factorial(num) {
+//   let fact = 1;
+//   for (let i = 1; i <= num; i++) {
+//     fact *= i;
+//   }
+//   console.log(`Factorial of the ${num} is  : ${fact}`);
+// }
+
+// factorial(5);
+// factorial(6);
+
+// =====================================================
+// factorial of number using resursion
+
+// function factorial(num) {
+//   if (num === 0 || num === 1) {
+//     return 1;
+//   }
+//   return num * factorial(num - 1);
+// }
+
+// console.log(`The factorioal of  : ${factorial(5)}`);
+// console.log(`The factorioal of   : ${factorial(6)}`);
+
+// =====================================================
+
+// Fibonacci Series
+
+// const fibonacci = (num) => {
+//   if (num === 0) {
+//     return 0;
+//   } else if (num === 1) {
+//     return 1;
+//   }
+
+//   return fibonacci(num - 1) + fibonacci(num - 2);
+// };
+
+// console.log(`The fibonacci is  ${fibonacci(0)}`);
+// console.log(`The fibonacci is  ${fibonacci(1)}`);
+// console.log(`The fibonacci is  ${fibonacci(2)}`);
+// console.log(`The fibonacci is  ${fibonacci(3)}`);
+// console.log(`The fibonacci is  ${fibonacci(4)}`);
+// console.log(`The fibonacci is  ${fibonacci(5)}`);
+// console.log(`The fibonacci is  ${fibonacci(6)}`);
+
+// =====================================================
+// print Fibonacci Series
+
+// const printFibonacci = (num) => {
+//   let a = 0;
+//   let b = 1;
+//   let next;
+
+//   for (let i = 0; i <= num; i++) {
+//     console.log(a);
+//     next = a + b;
+//     a = b;
+//     b = next;
+//   }
+
+// };
+
+// printFibonacci(7);
+// =====================================================
+
+// print Fibonacci Series using resucsion
+
+const Fibonacci = (num) => {
+  if (num === 0) {
+    return 0;
+  } else if (num === 1) {
+    return 1;
+  }
+  return Fibonacci(num - 1) + Fibonacci(num - 2);
+};
+
+const printFibonacci = (num) => {
+  let fib = [];
+  for (let i = 0; i <= num; i++) {
+    fib.push(Fibonacci(i));
+  }
+  console.log(fib);
+};
+
+printFibonacci(0);
+printFibonacci(1);
+printFibonacci(2);
+printFibonacci(3);
+printFibonacci(4);
+printFibonacci(5);
+printFibonacci(6);
+printFibonacci(7);
+
+// =====================================================
