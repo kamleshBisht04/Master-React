@@ -132,23 +132,44 @@
 // ===================================================
 //  madam
 
-const checkPaliandrome = (num) => {
-  const orignalNum = num;
+// const checkPaliandrome = (num) => {
+//   const orignalNum = num;
 
-  let reverse = 0;
+//   let reverse = 0;
 
-  while (num > 0) {
-    let digit = num % 10;
-    reverse = reverse * 10 + digit;
-    num = Math.floor(num / 10);
-  }
-  if (orignalNum === reverse) {
-    console.log(`${orignalNum} is paliandrome..`);
-  } else {
-    console.log(`${orignalNum} is not paliandrome..`);
-  }
-};
+//   while (num > 0) {
+//     let digit = num % 10;
+//     reverse = reverse * 10 + digit;
+//     num = Math.floor(num / 10);
+//   }
+//   if (orignalNum === reverse) {
+//     console.log(`${orignalNum} is paliandrome..`);
+//   } else {
+//     console.log(`${orignalNum} is not paliandrome..`);
+//   }
+// };
 
-checkPaliandrome(123321);
-checkPaliandrome(121);
+// checkPaliandrome(123321);
+// checkPaliandrome(121);
+// ===================================================
+
+//  3 way to 2 pointer way
+
+// const checkPaliandrome = (str) => {
+//   let left = 0;
+//   let right = str.length - 1;
+
+//   while (left < right) {
+//     if (str[left] !== str[right]) {
+//       return false;
+//     }
+//     left++;
+//     right--;
+//   }
+//   return true;
+// };
+
+// console.log(checkPaliandrome('madam'));
+// console.log(checkPaliandrome('racar'));
+
 // ===================================================
