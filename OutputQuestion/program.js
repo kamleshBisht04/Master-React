@@ -91,19 +91,64 @@
 // ===================================================
 // Count Vowels
 
-const countVouwl = (str) => {
-  let count = 0;
-  const vowel = "aeiouAEIOU";
+// const countVowel = (str) => {
+//   let count = 0;
+//   const vowel = "aeiouAEIOU";
 
-  for (let char of str) {
-    if (vowel.includes(char)) {
-      count++;
-    }
+//   for (let char of str) {
+//     if (vowel.includes(char)) {
+//       count++;
+//     }
+//   }
+//   return count;
+// };
+
+// const totalVowel = countVowel("appleAppLE");
+// console.log(totalVowel);
+
+// const total = countVowel("I am the best student in the class");
+// console.log(total);
+// ===================================================
+
+// Check Palindrome
+// madam ,racecar ,level ,123321
+
+// const checkPaliadrome = (str) => {
+//   const length = str.length;
+//   const lowerString = str.toLowerCase();
+
+//   for (let i = 0; i <= length / 2; i++) {
+//     if (lowerString[i] !== lowerString[length - 1 - i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// const isPaliandrome = checkPaliadrome("madam");
+
+// console.log(isPaliandrome);
+
+// ===================================================
+//  madam
+
+const checkPaliandrome = (num) => {
+  const orignalNum = num;
+
+  let reverse = 0;
+
+  while (num > 0) {
+    let digit = num % 10;
+    reverse = reverse * 10 + digit;
+    num = Math.floor(num / 10);
   }
-  return count;
+  if (orignalNum === reverse) {
+    console.log(`${orignalNum} is paliandrome..`);
+  } else {
+    console.log(`${orignalNum} is not paliandrome..`);
+  }
 };
 
-const totalVowel = countVouwl("appleAppLE");
-console.log(totalVowel);
-
+checkPaliandrome(123321);
+checkPaliandrome(121);
 // ===================================================
