@@ -243,30 +243,30 @@
 
 // print Fibonacci Series using resucsion
 
-const Fibonacci = (num) => {
-  if (num === 0) {
-    return 0;
-  } else if (num === 1) {
-    return 1;
-  }
-  return Fibonacci(num - 1) + Fibonacci(num - 2);
-};
+// const Fibonacci = (num) => {
+//   if (num === 0) {
+//     return 0;
+//   } else if (num === 1) {
+//     return 1;
+//   }
+//   return Fibonacci(num - 1) + Fibonacci(num - 2);
+// };
 
-const printFibonacci = (num) => {
-  let fib = [];
-  for (let i = 0; i <= num; i++) {
-    fib.push(Fibonacci(i));
-  }
-  console.log(fib);
-};
+// const printFibonacci = (num) => {
+//   let fib = [];
+//   for (let i = 0; i <= num; i++) {
+//     fib.push(Fibonacci(i));
+//   }
+//   console.log(fib);
+// };
 
-printFibonacci(0);
-printFibonacci(1);
-printFibonacci(2);
-printFibonacci(3);
-printFibonacci(4);
-printFibonacci(5);
-printFibonacci(6);
-printFibonacci(7);
+// printFibonacci(0);
+// printFibonacci(1);
+// printFibonacci(2);
+// printFibonacci(3);
+// printFibonacci(4);
+// printFibonacci(5);
+// printFibonacci(6);
+// printFibonacci(7);
 
 // =====================================================
