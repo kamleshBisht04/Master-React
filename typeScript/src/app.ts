@@ -265,6 +265,69 @@ const emp: Employee = {
 
 console.log(emp);
 
-// ============================================================
+// =========================================
 
 // any type
+
+let value: any;
+
+value = 10;
+console.log(value);
+
+value = "Hello";
+console.log(value);
+
+value = true;
+console.log(value);
+
+value = [1, 2, 3];
+console.log(value);
+
+let dataName: any = "kamlesh";
+
+console.log(dataName.toUpperCase());
+// console.log(dataName.toFixed(2));  // no type checking // no type shefty
+
+// ============================================
+
+let value1: unknown;
+
+value1: 10;
+value1: "Hello";
+value = true;
+
+let userInput: unknown = "kamlesh";
+
+//  console.log(userInput.toUpperCase());
+
+if (typeof userInput === "string") {
+  console.log(userInput.toUpperCase());
+}
+
+// example 2
+let input: unknown = 50;
+
+if (typeof input === "number") {
+  console.log(input.toFixed(2));
+}
+// ============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
