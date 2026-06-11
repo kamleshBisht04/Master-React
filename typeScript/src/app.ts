@@ -375,5 +375,80 @@ console.log(getNumber());
 
 // ============================================
 
+function complex(): number | string {
+  let data = 25;
+  let data2 = "hello";
+
+  if (typeof data === "number") {
+    return data;
+  }
+  return data2;
+}
+
+// ============================================
+
+// never data type in typescript
+
+function throwError(message: string): never {
+  throw new Error(message);
+}
+
+// throwError("Something went wrong!");
+
+// example 2
+
+function logForever(): never {
+  while (true) {
+    console.log("output and data never executed ");
+  }
+}
+// ============================================
+
+// Function Parameters in TypeScript
+
+function greetings(name: string): string {
+  return `Hello, ${name}`;
+}
+
+console.log(greetings("Kamlesh"));
+
+// 2. Multiple Parameters
+
+function adding(a: number, b: number): number {
+  return a + b;
+}
+
+console.log(adding(10, 20));
+
+// 3. Optional Parameters (?)
+
+function introduce(name: string, age?: number): string {
+  if (age) {
+    return `My name is ${name} and I am ${age} years old.`;
+  }
+  return `My name is ${name}.`;
+}
+
+console.log(introduce("Kamlesh"));
+console.log(introduce("Kamlesh", 22));
+
+// 4. Default Parameters
+
+function welcome(name: string = "Guest"): string {
+  return `Welcome, ${name}!`;
+}
+
+console.log(welcome());
+console.log(welcome("Kamlesh"));
+
+// 5. Rest Parameters (...)
+
+function totalValue(...numbers: number[]): number {
+  return numbers.reduce((sum, num) => sum + num, 0);
+}
+
+console.log(totalValue(10, 20, 20, 30, 50));
+console.log(totalValue(1050,50));
+
 
 
