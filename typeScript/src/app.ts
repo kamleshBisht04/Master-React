@@ -312,22 +312,68 @@ if (typeof input === "number") {
 }
 // ============================================
 
+// Return type in type script function
 
+function greeting(name: string): string {
+  return `Hello , ${name}`;
+}
 
+console.log(greeting("kamlesh"));
 
+// number
 
+function add(a: number, b: number): number {
+  return a + b;
+}
 
+console.log(add(5, 6));
 
+// function return boolean
 
+function isAdult(age: number): boolean {
+  return age >= 18;
+}
 
+console.log(isAdult(20));
+console.log(isAdult(15));
 
+// return void
 
+function printMessage(message: string): void {
+  console.log(message);
+}
 
+printMessage("welcome to TypeScript!");
 
+// ============================================
 
+const multiply = (a: number, b: number): number => {
+  return a * b;
+};
+console.log(multiply(5, 7));
 
+//  returning object
 
+function getUser(): { name: string; age: number } {
+  return {
+    name: "kamlesh",
+    age: 30,
+  };
+}
 
+console.log(getUser());
+
+// ============================================
+
+// return an array from function
+
+const getNumber = (): number[] => {
+  return [10, 20, 30, 40, 50];
+};
+
+console.log(getNumber());
+
+// ============================================
 
 
 
