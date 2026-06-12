@@ -698,7 +698,7 @@ class BankAccount {
 
 const account1 = new BankAccount();
 console.log(account1.show_balance());
-// console.log(account1.balance) // private valable 
+// console.log(account1.balance) // private valable
 
 // =================================
 
@@ -714,5 +714,50 @@ class Dog extends Animal {
 
 const dog = new Dog();
 dog.bark();
+
+// ====================================
+// Readonly Property
+
+class Car {
+  readonly brand: string;
+
+  constructor(brand: string) {
+    this.brand = brand;
+  }
+}
+
+const car1 = new Car("toyta");
+console.log(car1);
+// car1.brand="tesla";
+
+// ====================================
+// inheritance  and method overrideing
+// private // contruction // super()
+
+class Animals {
+  makeSound(): void {
+    console.log("Animal make sound");
+  }
+}
+
+class Dogs extends Animals {
+  private name: string;
+  constructor(name: string) {
+    super();
+    this.name = name;
+  }
+
+  bark(): void {
+    console.log(`Dog barks`);
+  }
+
+  makeSound(): void {
+    console.log(`${this.name} make sound bhaw bhaw...`);
+  }
+}
+
+const labrador = new Dogs("labrador");
+labrador.bark();
+labrador.makeSound();
 
 // ====================================
