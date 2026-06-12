@@ -592,3 +592,37 @@ const bcaStudent: collageStudentData = {
 };
 
 console.log(bcaStudent);
+
+// ===============================================
+// type
+
+type Status = "success" | "error" | "loading";
+
+let currentStatus: Status = "success";
+
+// enum
+enum Days {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+console.log(Days[4]);
+console.log(Days.Friday);
+console.log(Days);
+
+// letral type
+
+let direction: "left" | "right" | "up" | "down";
+
+direction = "up";
+// direction = "forward";
+
+console.log(direction);
+
+// =================================
+
