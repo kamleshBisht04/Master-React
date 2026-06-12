@@ -112,7 +112,6 @@ console.log(obj[d_id]);
 
 //=========================================
 
-
 // Array datatype
 // collection of same data type and pre-define data type
 
@@ -615,28 +614,105 @@ console.log(direction);
 
 // Handling the DOM events and inputs in type script...
 
-console.log("ts file conect to js file")
-
+console.log("ts file conect to js file");
 
 // how to use ts for input feilds
 
-const button = document.getElementById("btn") as HTMLButtonElement;
+// const button = document.getElementById("btn") as HTMLButtonElement;
 
-button.addEventListener("click", getInfo);
+// button.addEventListener("click", getInfo);
 
-function getInfo(): void {
-  const nameInput = document.getElementById("username") as HTMLInputElement;
-  const emailInput = document.getElementById("email") as HTMLInputElement;
-  const ageInput = document.getElementById("age") as HTMLInputElement;
+// function getInfo(): void {
+//   const nameInput = document.getElementById("username") as HTMLInputElement;
+//   const emailInput = document.getElementById("email") as HTMLInputElement;
+//   const ageInput = document.getElementById("age") as HTMLInputElement;
 
-  console.log(nameInput.value);
-  console.log(emailInput.value);
-  console.log(ageInput.value);
-}
+//   console.log(nameInput.value);
+//   console.log(emailInput.value);
+//   console.log(ageInput.value);
+// }
 
 // =================================
+//#########################################
+//#########################################
+//#########################################
 
 // class in type scripts
 
+class Person {
+  name: string;
+  age: number;
 
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
 
+  greet(): void {
+    console.log(`Hello ,my name is ${this.name} and age is ${this.age}`);
+  }
+}
+
+const person1 = new Person("kamlesh", 30);
+person1.greet();
+
+const person2 = new Person("deepak", 36);
+person2.greet();
+
+// =================================
+// fucntion inside a claa
+
+class Calculator {
+  add(num1: number, num2: number): number {
+    return num1 + num2;
+  }
+}
+
+const cal = new Calculator();
+console.log(cal.add(5, 6));
+
+// =================================
+//Access modifiers..
+
+class Users {
+  public name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+const user1 = new Users("Kamlesh");
+console.log(user1.name);
+
+// =================================
+// private
+
+class BankAccount {
+  private balance: number = 10005;
+
+  show_balance(): number {
+    return this.balance;
+  }
+}
+
+const account1 = new BankAccount();
+console.log(account1.show_balance());
+// console.log(account1.balance) // private valable 
+
+// =================================
+
+class Animal {
+  protected sound: string = "Some sound";
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log(this.sound);
+  }
+}
+
+const dog = new Dog();
+dog.bark();
+
+// ====================================
