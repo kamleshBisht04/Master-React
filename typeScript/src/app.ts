@@ -748,6 +748,7 @@ class Dogs extends Animals {
   }
 
   bark(): void {
+    super.makeSound(); //call the parent class method
     console.log(`Dog barks`);
   }
 
@@ -761,3 +762,21 @@ labrador.bark();
 labrador.makeSound();
 
 // ====================================
+// getter and setter 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
