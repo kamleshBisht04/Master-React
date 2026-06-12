@@ -1,4 +1,5 @@
 //  type script basic
+export {};
 
 var age: number = 52;
 var collage: string = "DBIT";
@@ -79,12 +80,12 @@ console.log(val);
 
 // number data type max value =2^53-1
 
-let bigNumber: bigint = 900719925474090n;
-let x = 1n;
-let y = 2n;
+// let bigNumber: bigint = 900719925474090;
+// let x = 1n;
+// let y = 2n;
 
-console.log(bigNumber + x);
-console.log(bigNumber + y);
+// console.log(bigNumber + x);
+// console.log(bigNumber + y);
 
 // symbol
 
@@ -111,20 +112,6 @@ console.log(obj[d_id]);
 
 //=========================================
 
-// how to use ts for input feilds
-
-function getInfo() {
-  const nameInput = document.getElementById("username") as HTMLInputElement;
-  const name: string = nameInput.value;
-
-  const emailInput = document.getElementById("email") as HTMLInputElement;
-  const email: string = emailInput.value;
-
-  const ageInput = document.getElementById("age") as HTMLInputElement;
-  const age: string = ageInput.value;
-
-  console.log(name, email, age);
-}
 
 // Array datatype
 // collection of same data type and pre-define data type
@@ -625,4 +612,31 @@ direction = "up";
 console.log(direction);
 
 // =================================
+
+// Handling the DOM events and inputs in type script...
+
+console.log("ts file conect to js file")
+
+
+// how to use ts for input feilds
+
+const button = document.getElementById("btn") as HTMLButtonElement;
+
+button.addEventListener("click", getInfo);
+
+function getInfo(): void {
+  const nameInput = document.getElementById("username") as HTMLInputElement;
+  const emailInput = document.getElementById("email") as HTMLInputElement;
+  const ageInput = document.getElementById("age") as HTMLInputElement;
+
+  console.log(nameInput.value);
+  console.log(emailInput.value);
+  console.log(ageInput.value);
+}
+
+// =================================
+
+// class in type scripts
+
+
 
