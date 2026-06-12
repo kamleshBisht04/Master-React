@@ -312,7 +312,7 @@ if (typeof input === "number") {
 }
 // ============================================
 
-// Return type in type script function
+// function Return  type in type script function
 
 function greeting(name: string): string {
   return `Hello , ${name}`;
@@ -448,7 +448,122 @@ function totalValue(...numbers: number[]): number {
 }
 
 console.log(totalValue(10, 20, 20, 30, 50));
-console.log(totalValue(1050,50));
+console.log(totalValue(1050, 50));
 
+// ============================================
 
+// union types
 
+let value2: number | string;
+
+value2 = 56;
+value2 = "union can hold more than one data type";
+
+console.log(value2);
+
+// example 2
+
+function printId(id: number | string): void {
+  console.log("ID : ", id);
+}
+printId(123);
+printId("ABC123");
+
+// example 3
+
+function display(value: string | number) {
+  if (typeof value === "string") {
+    console.log(value.toUpperCase()); // string methods
+  } else {
+    console.log(value.toFixed(2)); // number methods
+  }
+}
+
+display("hello");
+display(25);
+
+// example 4
+
+let datas: string | number[];
+
+datas = "string is allowed";
+
+datas = [10, 20, 50, 60, 80];
+
+console.log(datas);
+
+let data1: (string | number)[] = [10, "hello", 20, "world"];
+
+console.log(data1);
+
+// union type function return
+
+function getResult(success: boolean): string | number {
+  if (success) {
+    return "Operation Successful";
+  }
+  return 0;
+}
+
+console.log(getResult(true));
+console.log(getResult(false));
+
+//  custome data type
+
+type Admin = {
+  name: string;
+  role: string;
+};
+
+type User = {
+  name: string;
+  email: string;
+};
+
+let person: User | Admin;
+
+person = {
+  name: "kamlesh",
+  role: "manager",
+};
+
+person = {
+  name: "Deepak",
+  email: "Deepak@example.com",
+};
+
+console.log(person);
+
+// example
+
+interface collageData {
+  name: string;
+  age: number;
+  branch: string;
+  year: number;
+}
+
+let student2: collageData = {
+  name: "kamlesh",
+  age: 30,
+  branch: "dbit",
+  year: 2028,
+};
+
+console.log(student2);
+
+interface teacher extends collageData {
+  teacherId: string;
+}
+
+let teacher1: teacher = {
+  name: "sir ",
+  age: 45,
+  branch: "dbit",
+  year: 2025,
+  teacherId: "dbit10021236",
+};
+
+console.log(teacher1);
+
+// ==================================================
