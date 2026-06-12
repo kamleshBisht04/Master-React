@@ -762,21 +762,83 @@ labrador.bark();
 labrador.makeSound();
 
 // ====================================
-// getter and setter 
+// getter and setter
+
+class Persons {
+  private _age: number;
+
+  constructor(age: number) {
+    this._age = age;
+  }
+
+  get age(): number {
+    return this._age;
+  }
+  set age(value: number) {
+    this._age = value;
+  }
+}
+
+const p2 = new Persons(35);
+console.log(p2.age);
+
+p2.age = 36;
+console.log(p2.age);
+
+// ====================================
+
+class Person1 {
+  private _age: number = 0;
+
+  get age(): number {
+    return this._age;
+  }
+
+  set age(value: number) {
+    if (value > 0) {
+      this._age = value;
+    }
+  }
+}
+
+const p = new Person1();
+
+p.age = 25; // Calls setter
+p.age = -10;
+console.log(p.age);
+
+// ====================================
+// combine exemple of all 
+
+class Student {
+  constructor(
+    public name: string,
+    public rollNo: number,
+    private marks: number
+  ) {}
+
+  displayInfo(): void {
+    console.log(
+      `Name: ${this.name}, Roll No: ${this.rollNo}, Marks: ${this.marks}`
+    );
+  }
+
+  getMarks(): number {
+    return this.marks;
+  }
+}
+
+const student11 = new Student("Kamlesh", 101, 95);
+
+student11.displayInfo();
+
+console.log(student11.name);       // ✅
+console.log(student11.rollNo);     // ✅
+console.log(student11.getMarks()); // ✅
+// console.log(student11.marks);   // ❌ Error (private)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// ===============================================================
 
 
 
