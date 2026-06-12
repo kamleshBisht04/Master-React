@@ -567,3 +567,28 @@ let teacher1: teacher = {
 console.log(teacher1);
 
 // ==================================================
+
+// intersection
+
+type collageStudent = {
+  name: string;
+  age: number;
+  studentId: string;
+};
+
+type collages = {
+  collage_id: string;
+  collageName: string;
+};
+
+type collageStudentData = collageStudent & collages;
+
+const bcaStudent: collageStudentData = {
+  name: "kamlesh",
+  age: 30,
+  studentId: "BCA110",
+  collage_id: "DBIT2028",
+  collageName: "DBIT DEHRADUN",
+};
+
+console.log(bcaStudent);
