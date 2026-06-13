@@ -835,7 +835,7 @@ console.log(student11.rollNo); // ✅
 console.log(student11.getMarks()); // ✅
 // console.log(student11.marks);   // ❌ Error (private)
 
-// ===============================================================
+// ===========================================
 
 // typeof gaurd
 
@@ -849,7 +849,7 @@ function printValue(value: number | string) {
 
 printValue(25);
 printValue("kamlesh");
-
+// =============================================
 // instance of
 
 class Dogss {
@@ -875,7 +875,7 @@ function makeSound(animal: Dogss | Cat) {
 makeSound(new Dogss());
 makeSound(new Cat());
 
-//  in operater 
+//  in operater
 
 type Cars = {
   drive: () => void;
@@ -893,6 +893,7 @@ function move(vehicle: Cars | Boat) {
   }
 }
 
+// =======================================================
 type SuccessResponse = {
   success: true;
   data: string;
@@ -923,4 +924,28 @@ handleResponse({
 
 // =======================================================
 
+// generice => provide reusable component and type safty
 
+// problem in any
+function getValue(value: any) {
+  return value;
+}
+
+let num = getValue(10); // any
+let str11 = getValue("Hello"); // any
+
+console.log(typeof num);
+console.log(typeof str11);
+
+// solution is  generic
+
+function getValus<T>(value: T): T {
+  return value;
+}
+
+let num11 = getValus(10);
+let str12 = getValus("Hello");
+let arrayname= getValus(["kamlesh","Deepak"])
+
+console.log(typeof num);
+console.log(typeof str11);
