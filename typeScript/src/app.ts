@@ -963,7 +963,7 @@ console.log(typeof str11);
 // console.log(firstString); // A
 
 // =======================================================
-//  keyOf  union of keys 
+//  keyOf  union of keys
 type Personss = {
   name: string;
   age: number;
@@ -978,5 +978,46 @@ key = "name";
 key = "age";
 key = "city";
 
+// =======================================================
+// index signature
+
+interface teacherDataType {
+  name: string;
+  collage: string;
+  employeeId: string;
+  [key: string]: string | number | boolean;
+}
+
+const teacherData: teacherDataType = {
+  name: "Kamlesh Singh",
+  collage: "DBIT DEHRADUN",
+  employeeId: "dbitEmp101",
+  joiningData: "12-05-2025",
+  age: 25,
+  isActive: true,
+};
 
 // =======================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
