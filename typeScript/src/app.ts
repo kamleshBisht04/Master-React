@@ -945,7 +945,38 @@ function getValus<T>(value: T): T {
 
 let num11 = getValus(10);
 let str12 = getValus("Hello");
-let arrayname= getValus(["kamlesh","Deepak"])
+let arrayname = getValus(["kamlesh", "Deepak"]);
 
 console.log(typeof num);
 console.log(typeof str11);
+
+// =======================================================
+
+// function getFirstElement<T>(arr: T[]): T {
+//   return arr[0];
+// }
+
+// const firstNumber = getFirstElement([10, 20, 30]);
+// const firstString = getFirstElement(["A", "B", "C"]);
+
+// console.log(firstNumber); // 10
+// console.log(firstString); // A
+
+// =======================================================
+//  keyOf  union of keys 
+type Personss = {
+  name: string;
+  age: number;
+  city: string;
+};
+
+type PersonKeys = keyof Personss;
+
+let key: PersonKeys;
+
+key = "name";
+key = "age";
+key = "city";
+
+
+// =======================================================
