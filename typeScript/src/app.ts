@@ -808,19 +808,17 @@ p.age = -10;
 console.log(p.age);
 
 // ====================================
-// combine exemple of all 
+// combine exemple of all
 
 class Student {
   constructor(
     public name: string,
     public rollNo: number,
-    private marks: number
+    private marks: number,
   ) {}
 
   displayInfo(): void {
-    console.log(
-      `Name: ${this.name}, Roll No: ${this.rollNo}, Marks: ${this.marks}`
-    );
+    console.log(`Name: ${this.name}, Roll No: ${this.rollNo}, Marks: ${this.marks}`);
   }
 
   getMarks(): number {
@@ -832,13 +830,97 @@ const student11 = new Student("Kamlesh", 101, 95);
 
 student11.displayInfo();
 
-console.log(student11.name);       // ✅
-console.log(student11.rollNo);     // ✅
+console.log(student11.name); // ✅
+console.log(student11.rollNo); // ✅
 console.log(student11.getMarks()); // ✅
 // console.log(student11.marks);   // ❌ Error (private)
 
-
 // ===============================================================
 
+// typeof gaurd
+
+function printValue(value: number | string) {
+  if (typeof value === "string") {
+    console.log(value.length);
+  } else {
+    console.log(value.toFixed(2));
+  }
+}
+
+printValue(25);
+printValue("kamlesh");
+
+// instance of
+
+class Dogss {
+  bark() {
+    console.log("Woof!");
+  }
+}
+
+class Cat {
+  meow() {
+    console.log("Meow!");
+  }
+}
+
+function makeSound(animal: Dogss | Cat) {
+  if (animal instanceof Dogss) {
+    animal.bark();
+  } else {
+    animal.meow();
+  }
+}
+
+makeSound(new Dogss());
+makeSound(new Cat());
+
+//  in operater 
+
+type Cars = {
+  drive: () => void;
+};
+
+type Boat = {
+  sail: () => void;
+};
+
+function move(vehicle: Cars | Boat) {
+  if ("drive" in vehicle) {
+    vehicle.drive();
+  } else {
+    vehicle.sail();
+  }
+}
+
+type SuccessResponse = {
+  success: true;
+  data: string;
+};
+
+type ErrorResponse = {
+  success: false;
+  error: string;
+};
+
+function handleResponse(response: SuccessResponse | ErrorResponse) {
+  if (response.success) {
+    console.log("Data:", response.data);
+  } else {
+    console.log("Error:", response.error);
+  }
+}
+
+handleResponse({
+  success: true,
+  data: "User created successfully",
+});
+
+handleResponse({
+  success: false,
+  error: "Something went wrong",
+});
+
+// =======================================================
 
 
