@@ -1047,3 +1047,17 @@ const emp1: EmployeeData = {
   name: "kamlesh",
   age: 25,
 };
+
+// Omit<Type, Keys>;
+
+
+type EmployeeOmitType = Omit <Employee1,"age">;
+
+const emp2: EmployeeOmitType={
+  id:101,
+  name:"kamlesh",
+  branch :"CSE"
+}
+
+// Record<Keys, Type>;
+
