@@ -998,26 +998,15 @@ const teacherData: teacherDataType = {
 };
 
 // =======================================================
+// utility type in typescript
+//Partial<Type>
 
+interface Users {
+  id: number;
+  name: string;
+  email: string;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const updateUser: Partial<Users> = {
+  id: 101,
+};
