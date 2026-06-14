@@ -1004,9 +1004,46 @@ const teacherData: teacherDataType = {
 interface Users {
   id: number;
   name: string;
-  email: string;
+  email?: string;
 }
 
 const updateUser: Partial<Users> = {
   id: 101,
+};
+
+// Required<Type>;
+
+const requiredUser: Required<Users> = {
+  id: 101,
+  name: "kamlesh",
+  email: "kamleshbisht04@gmail.com",
+};
+
+// Readonly<Type>;
+
+interface Product {
+  id: number;
+  title: string;
+}
+
+const item: Readonly<Product> = {
+  id: 101,
+  title: "chips",
+};
+
+// Pick <Type>
+
+interface Employee1 {
+  id: number;
+  name: string;
+  age: number;
+  branch: string;
+}
+
+type EmployeeData = Pick<Employee1, "id" | "name" | "age">;
+
+const emp1: EmployeeData = {
+  id: 101,
+  name: "kamlesh",
+  age: 25,
 };
