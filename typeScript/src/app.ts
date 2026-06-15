@@ -1061,3 +1061,22 @@ const emp2: EmployeeOmitType={
 
 // Record<Keys, Type>;
 
+type StudentMarks = Record<string, number>;
+
+const markss: StudentMarks = {
+  Math: 95,
+  English: 88,
+  Science: 92,
+};
+
+
+
+
+
+
+
+
+
+
+
+
