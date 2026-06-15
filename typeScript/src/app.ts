@@ -1097,3 +1097,45 @@ type UserName = string | null | undefined;
 
 type ValidUserName = NonNullable<UserName>;
 
+// =============================================
+
+// namespce  = group together variablec class
+
+namespace MathUtils {
+  export function add(a: number, b: number): number {
+    return a + b;
+  }
+
+  export function subtract(a: number, b: number): number {
+    return a - b;
+  }
+}
+
+console.log(MathUtils.add(5, 6));
+console.log(MathUtils.subtract(10, 5));
+
+//  real world example
+
+namespace Banking {
+  export interface Account {
+    accountNumber: number;
+    balance: number;
+  }
+
+  export function checkBalance(account: Account): string {
+    return `Balance: ₹${account.balance}`;
+  }
+}
+
+const myAccount: Banking.Account = {
+  accountNumber: 123456,
+  balance: 50000,
+};
+
+console.log(Banking.checkBalance(myAccount));
+
+// ==========================================
+
+
+
+
