@@ -1050,14 +1050,13 @@ const emp1: EmployeeData = {
 
 // Omit<Type, Keys>;
 
+type EmployeeOmitType = Omit<Employee1, "age">;
 
-type EmployeeOmitType = Omit <Employee1,"age">;
-
-const emp2: EmployeeOmitType={
-  id:101,
-  name:"kamlesh",
-  branch :"CSE"
-}
+const emp2: EmployeeOmitType = {
+  id: 101,
+  name: "kamlesh",
+  branch: "CSE",
+};
 
 // Record<Keys, Type>;
 
@@ -1069,14 +1068,32 @@ const markss: StudentMarks = {
   Science: 92,
 };
 
+console.log(markss);
 
+type Roles = "admin" | "user" | "guest";
 
+const permissions: Record<Roles, string> = {
+  admin: "Full Access",
+  user: "Limited Access",
+  guest: "Read Only",
+};
 
+// Exclude<T, U>;
 
+type status = "success" | "error" | "loading";
 
+type finalStatus = Exclude<status, "loading">;
 
+// Extract<T, U>;
 
+type Statuss = "success" | "error" | "loading";
 
+type ErrorType = Extract<Statuss, "error" | "failed">;
+// "error"
 
+// NonNullable<T>;
 
+type UserName = string | null | undefined;
+
+type ValidUserName = NonNullable<UserName>;
 
