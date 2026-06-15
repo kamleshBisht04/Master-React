@@ -1136,6 +1136,23 @@ console.log(Banking.checkBalance(myAccount));
 
 // ==========================================
 
+// Decorators in typescript 
+
+function Component(constructor: Function) {
+  console.log(`Registering component: ${constructor.name}`);
+}
+
+@Component
+class HomeComponent {
+  constructor() {
+    console.log("Home Component Loaded");
+  }
+}
+
+const home = new HomeComponent();
+
+
+// ==========================================
 
 
 
