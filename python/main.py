@@ -387,28 +387,28 @@
 # -----------------------------------
 # String Methods
 
-full_name= "    kaMleSH singH BIsht     "
-name= "kamlesh"
-text = "python is good programming language python python python"
-print(name.capitalize())
+# full_name= "    kaMleSH singH BIsht     "
+# name= "kamlesh"
+# text = "python is good programming language python python python"
+# print(name.capitalize())
 
-print(full_name.upper())
-print(full_name.lower())
-print(full_name.lstrip())
-print(full_name.rstrip())
-print(full_name.strip())
-print(full_name.strip().capitalize())
-print(full_name.replace("singH",'Singh'))
-print(text.split())  
-print(text.title())
-print(full_name)     # string is immutable orignal value of string can't change ...
-print(text.replace('python',"java")) # it replace all instance of python
+# print(full_name.upper())
+# print(full_name.lower())
+# print(full_name.lstrip())
+# print(full_name.rstrip())
+# print(full_name.strip())
+# print(full_name.strip().capitalize())
+# print(full_name.replace("singH",'Singh'))
+# print(text.split())  
+# print(text.title())
+# print(full_name)     # string is immutable orignal value of string can't change ...
+# print(text.replace('python',"java")) # it replace all instance of python
 
-text= 'welcome to python!'
-print(text[3:-3])
-#-----------------------------
-print(text)
-print(text.find('p'))
+# text= 'welcome to python!'
+# print(text[3:-3])
+# #-----------------------------
+# print(text)
+# print(text.find('p'))
 
 # #SPLIT AND JOIN METHOD IN PYTHON
 
@@ -426,7 +426,35 @@ print(text.find('p'))
 # print(text.isspace())
 
 # ==================================================================
-    
+
+#  string inter polation 
+
+# -----------------------------------------
+# text = "Hello python How are you"
+# print(len(text))
+
+# # ord return the ascii value 
+# print(ord('A'))
+# print(ord('H'))
+
+# # chr return the aplha value of number 
+# print(chr(65))
+# print(chr(72))
+
+# -------------------------------------------
+
+# .fromat() Method
+
+# name ="kamlesh"
+# age = 25
+
+# print("My name is {} and my age is {}.".format(name,age))
+
+# # but 3.6 we are using f-string 
+
+# print(f"my name is {name} and my age is {age}.")  
+
+# -------------------------------------------#   
     
     
     

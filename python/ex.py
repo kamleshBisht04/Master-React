@@ -1,30 +1,5 @@
 
 
-# -----------------------------------------
-# text = "Hello python How are you"
-
-# print(len(text))
-
-# # ord return the ascii value 
-# print(ord('H'))
-
-# # chr retuen the aplha value of number 
-# print(chr(65))
-# print(chr(72))
-
-# -------------------------------------------
-
-# .fromat() Method
-
-# name ="kamlesh"
-# age = 25
-
-# print("My name is {} and my age is {}.".format(name,age))
-
-# # but 3.6 we are using f-string 
-
-# print(f"my name is {name} and my age is {age}.")
-
 
 # ------------------------------------------
 # ------------------------------------------
