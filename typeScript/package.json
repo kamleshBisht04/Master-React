@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "npx tsc -watch"
+  },
   "devDependencies": {
     "typescript": "^6.0.3"
   }
