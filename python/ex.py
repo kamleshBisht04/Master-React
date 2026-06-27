@@ -1,36 +1,7 @@
 
 
-# -------------------------------------------
-# ********************************
 
-# DATA STRUCTURE  IN PYTHON
-# list is mutable or orderd
 
-# marks =[25,36,96,85,74,85,85,52,85,96]
-# num=[5,2,3,4,5]
-
-# mixed =[25,52.4,'kamlesh',True,False,56]
-
-# print(marks)
-# print(mixed)
-
-# print(mixed[2])
-# print(marks[0])
-# print(marks[:3])   # slicing happend
-
-# # ***********************************
-# #  list methods
-# marks.append(5)
-# marks.insert(1,5)
-# marks.extend(num)
-# print("---------------")
-# print(marks)
-# marks.remove(5)  # remove the first occourance of element 5
-# print(marks)
-# marks.pop()
-# marks.sort()
-# marks.reverse()
-# print(marks)
 
 #  LIST COMPERHENSIONS 
 

@@ -460,160 +460,185 @@
 # FUNCTION AND MODULES
 #  function define ,calling,parameter,argument,return the value ,default value,positonal args,keyword args
 
-def greet(name):
-    print(f"Welcome to you .. {name}")
+# def greet(name):
+#     print(f"Welcome to you .. {name}")
 
-greet("kamlesh")
-greet("Deepak")
-greet("Suman")
+# greet("kamlesh")
+# greet("Deepak")
+# greet("Suman")
 
-# #  To calculate avarage 
+# # #  To calculate avarage 
 
-def avarage(num1,num2,num3):
-    sum= (num1+num2+num3)/3
-    print(f"The avarage of {num1},{num2},{num3} is {sum}")
+# def avarage(num1,num2,num3):
+#     sum= (num1+num2+num3)/3
+#     print(f"The avarage of {num1},{num2},{num3} is {sum}")
 
-avarage(2,3,4)
-avarage(5,2,1)
-avarage(20,21,12)
+# avarage(2,3,4)
+# avarage(5,2,1)
+# avarage(20,21,12)
 
-# # -------------------------------
-# # FUNCTIONAL ARGUMENT AND RETURN VALUE
+# # # -------------------------------
+# # # FUNCTIONAL ARGUMENT AND RETURN VALUE
 
-def add(a,b):
-    sum = a+b
-    print(f"The sum of two number {a} and {b} : {sum}")
+# def add(a,b):
+#     sum = a+b
+#     print(f"The sum of two number {a} and {b} : {sum}")
 
-add(5,6)
-add(10,6)
-add(15,16)
-# # ---------- Return the value from -------
+# add(5,6)
+# add(10,6)
+# add(15,16)
+# # # ---------- Return the value from -------
 
-def add(a,b):
-    return a+b
-    # sum = a+b
-    # return sum
+# def add(a,b):
+#     return a+b
+#     # sum = a+b
+#     # return sum
 
-print(f"The sum of two number is : {add(8,9)}")
+# print(f"The sum of two number is : {add(8,9)}")
 
-# ----------------------------------
-# default parameter
+# # ----------------------------------
+# # default parameter
 
-def greet(name = "Guest"):
-    print(f"Welcome to you .. {name}")
+# def greet(name = "Guest"):
+#     print(f"Welcome to you .. {name}")
 
-greet("kamlesh")
-greet() # default parameter 
+# greet("kamlesh")
+# greet() # default parameter 
 
-# -------------------------------------
+# # -------------------------------------
 
-def student(name ="Guest", age="20"):
-    print(f"Name:{name},Age:{age}")
+# def student(name ="Guest", age="20"):
+#     print(f"Name:{name},Age:{age}")
 
-student(age=20,name="kamlesh")
-student()
-student("Deepak",36)
+# student(age=20,name="kamlesh")
+# student()
+# student("Deepak",36)
 
-# ------------------------------
-# LAMDA FUNCTION => one liner function in python anonymous inline function
+# # ------------------------------
+# # LAMDA FUNCTION => one liner function in python anonymous inline function
 
-square = lambda num: num*num
-print(f"The square of number is {square(4)}")
+# square = lambda num: num*num
+# print(f"The square of number is {square(4)}")
 
-print(square(5))
-print(square(8))
+# print(square(5))
+# print(square(8))
 
-# #  another lambda function
-add = lambda a,b: a+b
+# # #  another lambda function
+# add = lambda a,b: a+b
 
-print(add(5,6))
-print(f"The sum of two number is : {add(11,9)}")
+# print(add(5,6))
+# print(f"The sum of two number is : {add(11,9)}")
 
-# #  another example
+# # #  another example
 
-number = [1,2,3,4,5,6,7,8,9]
-square = list(map(lambda x: x**2,number))
+# number = [1,2,3,4,5,6,7,8,9]
+# square = list(map(lambda x: x**2,number))
 
-print(square)
+# print(square)
 
-# -------------------------------------
-# Recursion in python
+# # -------------------------------------
+# # Recursion in python
 
-#  0 1 1 2 3 5 8 13 21
-#  0 1 2 3 4 5 6  7  8
+# #  0 1 1 2 3 5 8 13 21
+# #  0 1 2 3 4 5 6  7  8
 
-def fibonacci(num):
-    # base case of recurssion
-    if(num==0 or num==1):
-        return num
-    return fibonacci(num-2) + fibonacci(num-1)
+# def fibonacci(num):
+#     # base case of recurssion
+#     if(num==0 or num==1):
+#         return num
+#     return fibonacci(num-2) + fibonacci(num-1)
 
-print(f"Fibonacci seriese :  {fibonacci(8)}")
-print(f"Fibonacci seriese :  {fibonacci(6)}")
+# print(f"Fibonacci seriese :  {fibonacci(8)}")
+# print(f"Fibonacci seriese :  {fibonacci(6)}")
 
-# --------------------------------
-# for factorial using recursion
+# # --------------------------------
+# # for factorial using recursion
 
-# 5 = 5 * 4 * 3 * 2 * 1
-# n = n * factorial(n-1)
+# # 5 = 5 * 4 * 3 * 2 * 1
+# # n = n * factorial(n-1)
 
-def factorial(num):
-    if(num==0):
-        return 1
-    return num * factorial(num-1)
+# def factorial(num):
+#     if(num==0):
+#         return 1
+#     return num * factorial(num-1)
 
-print(f"The factorial of number is  :  {factorial(5)}")
+# print(f"The factorial of number is  :  {factorial(5)}")
 
-# ------------------------------------------------------
-# **************************************
-# MODULES AND pip using external libraries
+# # ------------------------------------------------------
+# # **************************************
+# # MODULES AND pip using external libraries
 
-# --- Build in modules in python
+# # --- Build in modules in python
 
-import math
+# import math
 
-print(math.sqrt(4))
-print(math.ceil(5.91))
-print(math.floor(5.01))
+# print(math.sqrt(4))
+# print(math.ceil(5.91))
+# print(math.floor(5.01))
 
-# ----we can create and import our modules 
+# # ----we can create and import our modules 
 
-import function_module
+# import function_module
 
-print(function_module.factorial(5))
-print(function_module.fibonacci(5))
-function_module.greet("kamlesh")
+# print(function_module.factorial(5))
+# print(function_module.fibonacci(5))
+# function_module.greet("kamlesh")
 
-import requests
-# response = requests.get("https://www.google.com")
-# print(response.text)
+# import requests
+# # response = requests.get("https://www.google.com")
+# # print(response.text)
 
-#  pip install pandas
+# #  pip install pandas
 
-# ------------------------------------------
-# FUNCTION SCOPE AND GLOBAL SCOPE AND LIFETIME
+# # ------------------------------------------
+# # FUNCTION SCOPE AND GLOBAL SCOPE AND LIFETIME
 
-def addation(num1,num2):
-    """ * num1 and num2 ,z are local variable 
-        * they are destyed after return the 
-        * global keyword is used to modify the global variable.
-    """
-    c= num1 +num2
-    z =5
-    global a
-    a =0
+# def addation(num1,num2):
+#     """ * num1 and num2 ,z are local variable 
+#         * they are destyed after return the 
+#         * global keyword is used to modify the global variable.
+#     """
+#     c= num1 +num2
+#     z =5
+#     global a
+#     a =0
 
 
-    return c
+#     return c
 
-z = 10
-a=1
-print(addation(5,9))
-print(z)
-print(a)
+# z = 10
+# a=1
+# print(addation(5,9))
+# print(z)
+# print(a)
 
-# # docstring (writing function Documentation ......)
-print(addation.__doc__)
+# # # docstring (writing function Documentation ......)
+# print(addation.__doc__)
+
+# =================================================================
+# ********************************
+
+# DATA STRUCTURE  IN PYTHON
+# list is mutable or orderd
+
+
+marks =[25,36,96,85,74,85,85,52,85,96]
+num=[5,2,3,4,5]
+
+mixed =[25,52.4,'kamlesh',True,False,56]
+
+print(marks)
+print(mixed)
+
+print(mixed[2])
+print(marks[0])
+print(marks[:3])   # slicing happend
+
+
+
+
+
+
 
 
     
