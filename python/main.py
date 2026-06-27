@@ -635,6 +635,23 @@ print(marks[0])
 print(marks[:3])   # slicing happend
 
 
+# # ***********************************
+# #  list methods
+marks.append(5)
+marks.insert(1,5)
+marks.extend(num)
+print("---------------")
+print(marks)
+marks.remove(5)  # remove the first occourance of element 5
+print(marks)
+marks.pop()
+print(marks)
+marks.sort()
+print(marks)
+marks.reverse()
+print(marks)
+
+
 
 
 
