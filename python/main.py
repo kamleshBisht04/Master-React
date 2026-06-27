@@ -1,4 +1,3 @@
-import function_module
 # day 1
 
 # print('--- INTRODUCTION ----')
@@ -579,9 +578,13 @@ print(math.floor(5.01))
 
 # ----we can create and import our modules 
 
-# import function_module
+import function_module
 
 print(function_module.factorial(5))
+print(function_module.fibonacci(5))
+function_module.greet("kamlesh")
+
+import requests
 # response = requests.get("https://www.google.com")
 # print(response.text)
 
@@ -590,27 +593,27 @@ print(function_module.factorial(5))
 # ------------------------------------------
 # FUNCTION SCOPE AND GLOBAL SCOPE AND LIFETIME
 
-# def addation(num1,num2):
-#     """ * num1 and num2 ,z are local variable 
-#         * they are destyed after return the 
-#         * global keyword is used to modify the global variable.
-#     """
-#     c= num1 +num2
-#     z =5
-#     global a
-#     a =0
+def addation(num1,num2):
+    """ * num1 and num2 ,z are local variable 
+        * they are destyed after return the 
+        * global keyword is used to modify the global variable.
+    """
+    c= num1 +num2
+    z =5
+    global a
+    a =0
 
 
-#     return c
+    return c
 
-# z = 10
-# a=1
-# print(addation(5,9))
-# print(z)
-# print(a)
+z = 10
+a=1
+print(addation(5,9))
+print(z)
+print(a)
 
 # # docstring (writing function Documentation ......)
-# print(addation.__doc__)
+print(addation.__doc__)
 
 
     
