@@ -1,35 +1,6 @@
 
 
 
-
-
-# --------------------------------
-# # SETS
-# #  unorder set of element unique collection,no duplicate
-
-# fruits= {'apple',"Apple",'banana','peach','cheery','banana','peach','cheery'}
-# print(fruits)
-
-# # SETS METHOD
-# fruits.add("graps")
-# fruits.add("gaava")
-# fruits.remove('gaava')
-# fruits.pop()
-# fruits.pop() 
-# # fruits.remove('jay')  error becz not present
-# fruits.discard('jay')
-# # fruits.clear()
-# print(fruits)
-
-# # example 2
-
-# a = {1,2,3,8,9}
-# b={1,2,12,13,14,15,16}
-
-# print(a.union(b))
-# print(a.intersection(b))
-# print(a.difference(b))
-
 # -------------------------------
 
 student ={"name":"kamlesh",1:"Delhi","age":28,"grade":'A'}
