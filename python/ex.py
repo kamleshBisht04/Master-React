@@ -1,22 +1,6 @@
 
 
 
-
-
-#  LIST COMPERHENSIONS 
-
-# table = [ 5 * i for i in range(1,11)]
-# print(table)
-
-# #  old ways 
-# table =[]
-# for i in range(1, 11):
-#     table.append(5 * i)
-
-# print(table)
-
-# #  square of first 10 numbers
-
 # square = [i*i for i in range(1,11)]
 # print(square)
 

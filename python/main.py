@@ -651,6 +651,32 @@ print(marks)
 marks.reverse()
 print(marks)
 
+# # ***********************************
+
+#  LIST COMPERHENSIONS 
+
+table = [5 * i for i in range(1,11)]
+print(table)
+
+# old way
+table = []
+num =5
+
+for i in range(1,11):
+    table.append(num*i)
+
+print(table)   
+
+# # *********************************** 
+# #  square of first 10 numbers
+
+
+
+
+
+
+# # ***********************************
+
 
 
 
