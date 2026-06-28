@@ -1,25 +1,7 @@
 
 
 
-# square = [i*i for i in range(1,11)]
-# print(square)
 
-# ---------------------------------
-# TUPLES 
-# ordered but immutable 
-
-# my_tuple=(10,20,50,20,20)
-# my_tuple1=(563, ) 
-
-# print(my_tuple)
-# print(my_tuple[0])
-# print(my_tuple.count(20))
-# print(my_tuple.index(50)) 
-# print(type(my_tuple1))
-
-# # tuple unpacking
-# a,b,c,d,e= my_tuple
-# print(a,b,c,d,e)
 
 # --------------------------------
 # # SETS

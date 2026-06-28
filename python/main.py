@@ -622,64 +622,78 @@
 # list is mutable or orderd
 
 
-marks =[25,36,96,85,74,85,85,52,85,96]
-num=[5,2,3,4,5]
+# marks =[25,36,96,85,74,85,85,52,85,96]
+# num=[5,2,3,4,5]
 
-mixed =[25,52.4,'kamlesh',True,False,56]
+# mixed =[25,52.4,'kamlesh',True,False,56]
 
-print(marks)
-print(mixed)
+# print(marks)
+# print(mixed)
 
-print(mixed[2])
-print(marks[0])
-print(marks[:3])   # slicing happend
+# print(mixed[2])
+# print(marks[0])
+# print(marks[:3])   # slicing happend
 
 
 # # ***********************************
 # #  list methods
-marks.append(5)
-marks.insert(1,5)
-marks.extend(num)
-print("---------------")
-print(marks)
-marks.remove(5)  # remove the first occourance of element 5
-print(marks)
-marks.pop()
-print(marks)
-marks.sort()
-print(marks)
-marks.reverse()
-print(marks)
+# marks.append(5)
+# marks.insert(1,5)
+# marks.extend(num)
+# print("---------------")
+# print(marks)
+# marks.remove(5)  # remove the first occourance of element 5
+# print(marks)
+# marks.pop()
+# print(marks)
+# marks.sort()
+# print(marks)
+# marks.reverse()
+# print(marks)
 
 # # ***********************************
 
 #  LIST COMPERHENSIONS 
 
-table = [5 * i for i in range(1,11)]
-print(table)
+# table = [5 * i for i in range(1,11)]
+# print(table)
 
-# old way
-table = []
-num =5
+# # old way
+# table = []
+# num =5
 
-for i in range(1,11):
-    table.append(num*i)
+# for i in range(1,11):
+#     table.append(num*i)
 
-print(table)   
+# print(table)   
 
 # # *********************************** 
 # #  square of first 10 numbers
 
-
-
-
-
+# square = [i*i for i in range(1,11)]
+# print(square)
 
 # # ***********************************
+# ---------------------------------
 
+# TUPLES 
+# ordered but immutable 
 
+my_tuple=(10,20,50,20,20)
+my_tuple1=(563, ) 
 
+print(my_tuple)
+print(my_tuple1)
 
+print(my_tuple[0])
+print(my_tuple1[0])
+print(my_tuple.count(20))
+print(my_tuple.index(50)) 
+print(type(my_tuple1))
+
+# # tuple unpacking
+a,b,c,d,e= my_tuple
+print(a,b,c,d,e)
 
 
 
