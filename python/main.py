@@ -829,46 +829,81 @@
 # ===================================================
 # Inheritance  & polymorphism 
 
-class Animal:
-    def __init__(self ,name):
-        self.name= name
+# class Animal:
+#     def __init__(self ,name):
+#         self.name= name
         
-    def speck(self):
-        print("Generic animal sound")
+#     def speck(self):
+#         print("Generic animal sound")
         
-    def canWalk(self):
-        print("animal can walk..")    
+#     def canWalk(self):
+#         print("animal can walk..")    
         
     
-class Dog(Animal):
+# class Dog(Animal):
 
-    def speck(self):
-        print("woof woof!!")
-        super().canWalk()
+#     def speck(self):
+#         print("woof woof!!")
+#         super().canWalk()
         
         
     
-class Cat(Animal):
-    def speck(self):
-        print("Meow!!")
+# class Cat(Animal):
+#     def speck(self):
+#         print("Meow!!")
         
-    def canWalk(self):
-        print("Cat is pat animal yes cat can walk ")
+#     def canWalk(self):
+#         print("Cat is pat animal yes cat can walk ")
           
 
 
-my_dogs= Dog("labrador")
-my_dogs.speck()
+# my_dogs= Dog("labrador")
+# my_dogs.speck()
 
 
-my_cat = Cat("pussy")
-my_cat.speck()
-my_cat.canWalk()
+# my_cat = Cat("pussy")
+# my_cat.speck()
+# my_cat.canWalk()
 
-animal = Animal("dogs")
-animal.speck()
+# animal = Animal("dogs")
+# animal.speck()
+
+# ========================================================
+
+# getter and setter 
+
+class Person:
+    def __init__(self,name,age):
+        self.__name = name 
+        self.__age=age
+    
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self,newName):
+        self.__name = newName
+        
+    def get_age(self):
+        return self.__age
+    
+    def set_age(self,newAge):
+        self.__age = newAge    
+        
+        
+p1 = Person("kamlesh",31)
+# print(p1.__age)  / could not access from outside the class directly 
+
+print(p1.get_name())
+print(p1.get_age())
+
+p1.set_name("Deepak")
+p1.set_age(20)
+
+print(p1.get_name())
+print(p1.get_age())
 
 
+# ============================================================
 
 
 
