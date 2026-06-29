@@ -871,39 +871,81 @@
 # ========================================================
 
 # getter and setter 
+# __ double underscore method is use for private variable 
 
-class Person:
-    def __init__(self,name,age):
-        self.__name = name 
-        self.__age=age
+# class Person:
+#     def __init__(self,name,age):
+#         self.__name = name 
+#         self.__age=age
     
-    def get_name(self):
-        return self.__name
+#     def get_name(self):
+#         return self.__name
     
-    def set_name(self,newName):
-        self.__name = newName
+#     def set_name(self,newName):
+#         self.__name = newName
         
-    def get_age(self):
-        return self.__age
+#     def get_age(self):
+#         return self.__age
     
-    def set_age(self,newAge):
-        self.__age = newAge    
+#     def set_age(self,newAge):
+#         self.__age = newAge    
         
         
-p1 = Person("kamlesh",31)
-# print(p1.__age)  / could not access from outside the class directly 
+# p1 = Person("kamlesh",31)
+# # print(p1.__age)  / could not access from outside the class directly 
 
-print(p1.get_name())
-print(p1.get_age())
+# print(p1.get_name())
+# print(p1.get_age())
 
-p1.set_name("Deepak")
-p1.set_age(20)
+# p1.set_name("Deepak")
+# p1.set_age(20)
 
-print(p1.get_name())
-print(p1.get_age())
+# print(p1.get_name())
+# print(p1.get_age())
 
 
 # ============================================================
+# ============================================================
+
+# using property decorator @
+
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.__name = name 
+#         self.__age=age
+        
+#     @property
+#     def name(self):
+#         return self.__name
+    
+#     @name.setter
+#     def name(self,newName):
+#         self.__name = newName
+        
+#     @property    
+#     def age(self):
+#         return self.__age
+    
+#     @age.setter
+#     def age(self,newAge):
+#         self.__age = newAge    
+              
+# p1 = Person("kamlesh",31)
+# # print(p1.__age)  / could not access from outside the class directly 
+# print(p1.age)
+# print(p1.name)
+
+# p1.name ="Deepak"
+# p1.age=32
+
+# print(p1.age)
+print(p1.name)
+
+# ========================================================
+
+
+
 
 
 
