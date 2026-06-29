@@ -779,6 +779,59 @@
 
 # object oriented programming
 
+# A class is a blueprint or template that defines the properties (attributes) and behaviors (methods) of objects.
+# An object is an instance of a class. It has its own data and can access the methods defined in the class.
+#class and objects
+
+
+class Student:
+    collageName :"DBIT"
+    
+    def __init__(self,name ,age):
+        self.name = name
+        self.age = age
+        
+    def studentInfo(self):
+        print(f"The name of student is {self.name} and age is {self.age}")
+        
+    
+
+student1 = Student("kamlesh",30)
+print(student1)
+
+# <__main__.Student object at 0x000001E3A2F98590>
+# __main__ → Current module name.
+# Student → Class name.
+# object → Indicates it is an instance of the class.
+# 0x... → Hexadecimal memory address (object reference).
+student1.studentInfo() 
+    
+# ==============================================================
+    
+class Dog:
+    species ="Cains familiaris"
+    
+    def __init__(self,name,breed):
+        self.name= name
+        self.breed= breed
+        
+    def bark(self):
+        print(f"{self.name} say woof!")
+        
+
+my_dog = Dog("Buddy","Golden Retriever")
+another_Dog = Dog("Lucy","Labrador")
+
+
+my_dog.bark()
+print(Dog.species)
+
+
+
+
+
+
+
 
 
 
