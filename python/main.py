@@ -940,9 +940,68 @@
 # p1.age=32
 
 # print(p1.age)
-print(p1.name)
+# print(p1.name)
 
 # ========================================================
+
+# Decorator
+
+# without Decoratoer
+
+# def my_decorater(fun):
+#     def wapper():
+#         print(f"Something is happend before execution")
+#         fun()
+#         print(f"Something is happend after execution")
+#     return wapper
+
+
+# def greet():
+#     print(f"hello welcome to you!!")    
+
+# f = my_decorater(greet)
+# f()
+
+# ========================  
+# ========================
+# using decorator 
+# A decorator is a function that takes another function or method as input, adds extra functionality to it without modifying its original code, and returns the modified function.
+
+# def my_decorater(fun):
+#     def wapper():
+#         print(f"Something is happend before execution")
+#         fun()
+#         print(f"Something is happend after execution")
+#     return wapper
+
+# @my_decorater
+# def greet():
+#     print(f"hello welcome to you!!")    
+
+# greet()
+
+# ==========================================
+
+# using Decorators with arguments 
+
+def printTimes(n):
+    def my_decorater(fun):
+        def wapper():
+            for i in range(n):
+                fun()
+        return wapper
+    return my_decorater
+
+
+@printTimes(5)
+def greet():
+    print("hello python!!")
+    
+greet()
+    
+        
+           
+            
 
 
 
