@@ -1230,6 +1230,37 @@
 
 # print("Eligible")    
 
+# =================================================
+
+# map
+
+number = [1,2,3,4,5,6,7,8,9]
+
+# def getSquare(x):
+#     return x**2
+
+# square = list(map(getSquare,number))
+# print(square)
+  
+square = list(map(lambda x:x**2 ,number)) 
+print(square)
+
+
+# filter 
+
+num = [100,200,500,600,700,800,900]
+
+greaterThan500= list(filter(lambda x:x>=500 ,num))
+print(greaterThan500)
+
+# reduce boil down the no to single one 
+
+from functools import reduce
+
+totalBalance =reduce(lambda x,y:x+y ,num)
+
+print(totalBalance)
+  
         
            
             

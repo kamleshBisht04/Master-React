@@ -13,6 +13,3 @@ def factorial(num):
     return num * factorial(num-1)
 
 
-
-def working(num):
-    if
