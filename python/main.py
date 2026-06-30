@@ -1084,108 +1084,152 @@
 # ================================================
 # operater overloading
 
-class Number:
+# class Number:
 
-    def __init__(self, value):
-        self.value = value
+#     def __init__(self, value):
+#         self.value = value
 
-    # +
-    def __add__(self, other):
-        return Number(self.value + other.value)
+#     # +
+#     def __add__(self, other):
+#         return Number(self.value + other.value)
 
-    # -
-    def __sub__(self, other):
-        return Number(self.value - other.value)
+#     # -
+#     def __sub__(self, other):
+#         return Number(self.value - other.value)
 
-    # *
-    def __mul__(self, other):
-        return Number(self.value * other.value)
+#     # *
+#     def __mul__(self, other):
+#         return Number(self.value * other.value)
 
-    # /
-    def __truediv__(self, other):
-        return Number(self.value / other.value)
+#     # /
+#     def __truediv__(self, other):
+#         return Number(self.value / other.value)
 
-    # //
-    def __floordiv__(self, other):
-        return Number(self.value // other.value)
+#     # //
+#     def __floordiv__(self, other):
+#         return Number(self.value // other.value)
 
-    # %
-    def __mod__(self, other):
-        return Number(self.value % other.value)
+#     # %
+#     def __mod__(self, other):
+#         return Number(self.value % other.value)
 
-    # **
-    def __pow__(self, other):
-        return Number(self.value ** other.value)
+#     # **
+#     def __pow__(self, other):
+#         return Number(self.value ** other.value)
 
-    # ==
-    def __eq__(self, other):
-        return self.value == other.value
+#     # ==
+#     def __eq__(self, other):
+#         return self.value == other.value
 
-    # !=
-    def __ne__(self, other):
-        return self.value != other.value
+#     # !=
+#     def __ne__(self, other):
+#         return self.value != other.value
 
-    # <
-    def __lt__(self, other):
-        return self.value < other.value
+#     # <
+#     def __lt__(self, other):
+#         return self.value < other.value
 
-    # >
-    def __gt__(self, other):
-        return self.value > other.value
+#     # >
+#     def __gt__(self, other):
+#         return self.value > other.value
 
-    # <=
-    def __le__(self, other):
-        return self.value <= other.value
+#     # <=
+#     def __le__(self, other):
+#         return self.value <= other.value
 
-    # >=
-    def __ge__(self, other):
-        return self.value >= other.value
+#     # >=
+#     def __ge__(self, other):
+#         return self.value >= other.value
 
-    # print(obj)
-    def __str__(self):
-        return str(self.value)
+#     # print(obj)
+#     def __str__(self):
+#         return str(self.value)
 
 
-n1 = Number(20)
-n2 = Number(10)
+# n1 = Number(20)
+# n2 = Number(10)
 
-print("Addition       :", n1 + n2)
-print("Subtraction    :", n1 - n2)
-print("Multiplication :", n1 * n2)
-print("Division       :", n1 / n2)
-print("Floor Division :", n1 // n2)
-print("Modulus        :", n1 % n2)
-print("Power          :", n1 ** n2)
+# print("Addition       :", n1 + n2)
+# print("Subtraction    :", n1 - n2)
+# print("Multiplication :", n1 * n2)
+# print("Division       :", n1 / n2)
+# print("Floor Division :", n1 // n2)
+# print("Modulus        :", n1 % n2)
+# print("Power          :", n1 ** n2)
 
-print("Equal          :", n1 == n2)
-print("Not Equal      :", n1 != n2)
-print("Less Than      :", n1 < n2)
-print("Greater Than   :", n1 > n2)
-print("Less Equal     :", n1 <= n2)
-print("Greater Equal  :", n1 >= n2)
+# print("Equal          :", n1 == n2)
+# print("Not Equal      :", n1 != n2)
+# print("Less Than      :", n1 < n2)
+# print("Greater Than   :", n1 > n2)
+# print("Less Equal     :", n1 <= n2)
+# print("Greater Equal  :", n1 >= n2)
 
 # =============================================
 # proble statement 
 
-class Student:
-    def __init__(self, marks):
-        self.marks = marks
+# class Student:
+#     def __init__(self, marks):
+#         self.marks = marks
       
-        # solution
-    def __add__(self, other):
-        return self.marks + other.marks   
+#         # solution
+#     def __add__(self, other):
+#         return self.marks + other.marks   
 
-s1 = Student(80)
-s2 = Student(90)
+# s1 = Student(80)
+# s2 = Student(90)
 
-print(s1 + s2)
+# print(s1 + s2)
 
 
 # ========================================================
 
+# error handling in python 
 
+# without try and expect
 
+# num = int(input("Enter a number: "))
+# print(10 / num)
+
+# print("Program Finished")
+ # ========================================================
+ 
+# try:
+#     num = int(input("Enter Number: "))
+#     print(10 / num)
+
+# except ZeroDivisionError:
+#     print("Number cannot be zero.")
+
+# except ValueError:
+#     print("Please enter only integer.")
+        
+# =======================================
+
+# try:
+#     num = int(input("Enter Number: "))
+#     result = 100 / num
+
+# except ValueError:
+#     print("Please enter a valid integer.")
+
+# except ZeroDivisionError:
+#     print("Number cannot be zero.")
+
+# else:
+#     print("Result =", result)
+
+# finally:
+#     print("Program Ended")
     
+# =========================    # 
+
+# age = int(input("Enter age: "))
+
+# if age < 18:
+#     raise ValueError("Age must be at least 18.")
+
+# print("Eligible")    
+
         
            
             
