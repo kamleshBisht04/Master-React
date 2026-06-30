@@ -1234,32 +1234,104 @@
 
 # map
 
-number = [1,2,3,4,5,6,7,8,9]
+# number = [1,2,3,4,5,6,7,8,9]
 
-# def getSquare(x):
-#     return x**2
+# # def getSquare(x):
+# #     return x**2
 
-# square = list(map(getSquare,number))
-# print(square)
+# # square = list(map(getSquare,number))
+# # print(square)
   
-square = list(map(lambda x:x**2 ,number)) 
-print(square)
+# square = list(map(lambda x:x**2 ,number)) 
+# print(square)
 
 
-# filter 
+# # filter 
 
-num = [100,200,500,600,700,800,900]
+# num = [100,200,500,600,700,800,900]
 
-greaterThan500= list(filter(lambda x:x>=500 ,num))
-print(greaterThan500)
+# greaterThan500= list(filter(lambda x:x>=500 ,num))
+# print(greaterThan500)
 
-# reduce boil down the no to single one 
+# # reduce boil down the no to single one 
 
-from functools import reduce
+# from functools import reduce
 
-totalBalance =reduce(lambda x,y:x+y ,num)
+# totalBalance =reduce(lambda x,y:x+y ,num)
 
-print(totalBalance)
+# print(totalBalance)
+
+# ==============================================
+#   walrus opereter 
+# The Walrus Operator (:=) was introduced in Python 3.8. It is also called the Assignment Expression Operator.
+
+
+# while(data:=input("Enter any number ?  ")):
+#      print(data)
+     
+#      if(data=="q"):
+#          break
+    
+# # ===========================    # 
+# data = input("Enter data (quit to stop): ")
+
+# while data != "quit":
+#     print(data)
+#     data = input("Enter data (quit to stop): ")
+
+
+# numbers = [1, 2, 3, 4, 5]
+
+# result = [square for i in numbers if (square := i ** 2) > 10]
+
+# print(result)
+    
+# ==============================================
+
+# *args (Non-keyword/Positional Arguments)
+# Collects extra positional arguments into a tuple.
+# Use it when you don't know how many positional arguments will be passed.
+
+def add(*args):
+    print(args)
+    return sum(args)
+
+print(add(10, 20, 30))
+
+print(add(10,20,30,40,50,60,70,80,90,100))
+  
+
+# ==============================================
+# **kwargs (Keyword Arguments)
+# Collects extra keyword arguments into a dictionary.
+# Use it when you don't know how many keyword arguments will be passed.  
+  
+def display(**kwargs):
+    print(kwargs)
+
+display(name="Alice", age=25, city="New York")   
+
+
+def info(*args, **kwargs):
+    print("Args:", args)
+    print("Kwargs:", kwargs)
+
+info(1, 2, 3, name="John", age=30)   
+
+# ==============================================
+      
+      
+       
+     
+        
+        
+    
+       
+        
+    
+    
+   
+    
   
         
            
