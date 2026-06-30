@@ -984,20 +984,62 @@
 
 # using Decorators with arguments 
 
-def printTimes(n):
-    def my_decorater(fun):
-        def wapper():
-            for i in range(n):
-                fun()
-        return wapper
-    return my_decorater
+# def printTimes(n):
+#     def my_decorater(fun):
+#         def wapper():
+#             for i in range(n):
+#                 fun()
+#         return wapper
+#     return my_decorater
 
 
-@printTimes(5)
-def greet():
-    print("hello python!!")
+# @printTimes(5)
+# def greet():
+#     print("hello python!!")
     
-greet()
+# greet()
+
+# ==================================
+
+# instance method
+
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Marks: {self.marks}")
+
+s1 = Student("Kamlesh", 90)
+s1.display()
+
+# ===========================================
+
+# @classmethod
+
+class Student:
+    school = "ABC School"
+
+    @classmethod
+    def show_school(cls):
+        print(cls.school)
+
+Student.show_school()
+
+# ===========================================
+# @staticmethod
+
+class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(Math.add(10, 20))
+
+# ===========================================
+
     
         
            
