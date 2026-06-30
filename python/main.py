@@ -1001,44 +1001,189 @@
 
 # ==================================
 
-# instance method
+# # instance method
+
+# class Student:
+#     def __init__(self, name, marks):
+#         self.name = name
+#         self.marks = marks
+
+#     def display(self):
+#         print(f"Name: {self.name}")
+#         print(f"Marks: {self.marks}")
+
+# s1 = Student("Kamlesh", 90)
+# s1.display()
+
+# # ===========================================
+
+# # @classmethod
+
+# class Student:
+#     school = "ABC School"
+
+#     @classmethod
+#     def show_school(cls):
+#         print(cls.school)
+
+# Student.show_school()
+
+# # ===========================================
+# # @staticmethod
+
+# class Mathutil:
+#     @staticmethod
+#     def add(a, b):
+#         return a + b
+
+# print(Mathutil.add(10, 20))
+
+# ===========================================
+
+# Magic Dunder method in python
+
+# double underscore method 
+
+# class Book:
+#     def __init__(self, title, pages):
+#         self.title = title
+#         self.pages = pages
+
+#     def __str__(self):
+#         return self.title
+
+#     def __len__(self):
+#         return self.pages
+
+#     def __add__(self, other):
+#         return self.pages + other.pages
+
+# b1 = Book("Python", 300)
+# b2 = Book("Java", 250)
+
+# print(b1)          # __str__
+# print(len(b1))     # __len__
+# print(b1 + b2)     # __add__
+
+# __init__	Initialize an object
+# __str__	User-friendly string representation
+# __repr__	Developer-friendly representation
+# __len__	Support len()
+# __add__	Support + operator
+# __sub__	Support - operator
+# __mul__	Support * operator
+# __eq__	Support ==
+# __lt__	Support <
+# __getitem__	Support indexing (obj[index])
+# __setitem__	Support assignment (obj[index] = value)
+# __call__	Make an object callable like a function
+# __del__	Called when an object is about to be destroyed
+
+
+# ================================================
+# ================================================
+# operater overloading
+
+class Number:
+
+    def __init__(self, value):
+        self.value = value
+
+    # +
+    def __add__(self, other):
+        return Number(self.value + other.value)
+
+    # -
+    def __sub__(self, other):
+        return Number(self.value - other.value)
+
+    # *
+    def __mul__(self, other):
+        return Number(self.value * other.value)
+
+    # /
+    def __truediv__(self, other):
+        return Number(self.value / other.value)
+
+    # //
+    def __floordiv__(self, other):
+        return Number(self.value // other.value)
+
+    # %
+    def __mod__(self, other):
+        return Number(self.value % other.value)
+
+    # **
+    def __pow__(self, other):
+        return Number(self.value ** other.value)
+
+    # ==
+    def __eq__(self, other):
+        return self.value == other.value
+
+    # !=
+    def __ne__(self, other):
+        return self.value != other.value
+
+    # <
+    def __lt__(self, other):
+        return self.value < other.value
+
+    # >
+    def __gt__(self, other):
+        return self.value > other.value
+
+    # <=
+    def __le__(self, other):
+        return self.value <= other.value
+
+    # >=
+    def __ge__(self, other):
+        return self.value >= other.value
+
+    # print(obj)
+    def __str__(self):
+        return str(self.value)
+
+
+n1 = Number(20)
+n2 = Number(10)
+
+print("Addition       :", n1 + n2)
+print("Subtraction    :", n1 - n2)
+print("Multiplication :", n1 * n2)
+print("Division       :", n1 / n2)
+print("Floor Division :", n1 // n2)
+print("Modulus        :", n1 % n2)
+print("Power          :", n1 ** n2)
+
+print("Equal          :", n1 == n2)
+print("Not Equal      :", n1 != n2)
+print("Less Than      :", n1 < n2)
+print("Greater Than   :", n1 > n2)
+print("Less Equal     :", n1 <= n2)
+print("Greater Equal  :", n1 >= n2)
+
+# =============================================
+# proble statement 
 
 class Student:
-    def __init__(self, name, marks):
-        self.name = name
+    def __init__(self, marks):
         self.marks = marks
+      
+        # solution
+    def __add__(self, other):
+        return self.marks + other.marks   
 
-    def display(self):
-        print(f"Name: {self.name}")
-        print(f"Marks: {self.marks}")
+s1 = Student(80)
+s2 = Student(90)
 
-s1 = Student("Kamlesh", 90)
-s1.display()
+print(s1 + s2)
 
-# ===========================================
 
-# @classmethod
+# ========================================================
 
-class Student:
-    school = "ABC School"
 
-    @classmethod
-    def show_school(cls):
-        print(cls.school)
-
-Student.show_school()
-
-# ===========================================
-# @staticmethod
-
-class Math:
-    @staticmethod
-    def add(a, b):
-        return a + b
-
-print(Math.add(10, 20))
-
-# ===========================================
 
     
         
