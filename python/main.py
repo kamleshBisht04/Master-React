@@ -1292,13 +1292,13 @@
 # Collects extra positional arguments into a tuple.
 # Use it when you don't know how many positional arguments will be passed.
 
-def add(*args):
-    print(args)
-    return sum(args)
+# def add(*args):
+#     print(args)
+#     return sum(args)
 
-print(add(10, 20, 30))
+# print(add(10, 20, 30))
 
-print(add(10,20,30,40,50,60,70,80,90,100))
+# print(add(10,20,30,40,50,60,70,80,90,100))
   
 
 # ==============================================
@@ -1306,17 +1306,17 @@ print(add(10,20,30,40,50,60,70,80,90,100))
 # Collects extra keyword arguments into a dictionary.
 # Use it when you don't know how many keyword arguments will be passed.  
   
-def display(**kwargs):
-    print(kwargs)
+# def display(**kwargs):
+#     print(kwargs)
 
-display(name="Alice", age=25, city="New York")   
+# display(name="Alice", age=25, city="New York")   
 
 
-def info(*args, **kwargs):
-    print("Args:", args)
-    print("Kwargs:", kwargs)
+# def info(*args, **kwargs):
+#     print("Args:", args)
+#     print("Kwargs:", kwargs)
 
-info(1, 2, 3, name="John", age=30)   
+# info(1, 2, 3, name="John", age=30)   
 
 # ==============================================
       
