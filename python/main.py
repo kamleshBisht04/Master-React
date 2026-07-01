@@ -1353,9 +1353,27 @@
 
 # git merge feature
 
+# =========================
 
+# git stash
+# git stash list
 
+# git stash apply
 
+# git stash drop
+
+# git stash pop
+
+# git clone repositoryURL
+
+# git remote -v
+
+# git push -u origin main
+
+# git clean -f
+# git branch --show-current
+
+# git reset --soft HEAD~1
 
 
 
