@@ -1319,9 +1319,46 @@
 # info(1, 2, 3, name="John", age=30)   
 
 # ==============================================
-      
-      
+
+# git and git  hub commannd 
+    
+#  git config --global user.name "Kamlesh"   
+# git config --global user.email "kamlesh@gmail.com" 
+
+# git config --list 
        
+# git log       
+# git log --oneline
+
+# git diff
+# git rm file.txt
+
+# git mv old.txt new.txt
+
+# branch 
+
+# git branch feature
+
+# git branch   (list of branch)
+
+# git branch -d feature
+
+# git checkout feature
+
+# create and swtich
+
+# git switch -c feature
+
+# git checkout main   
+
+# git merge feature
+
+
+
+
+
+
+
      
         
         
